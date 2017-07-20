@@ -1,0 +1,3382 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8"><script blzsys="1" type="text/javascript">//<![CDATA[
+function BlzDynamicImageLoader(registeredPollAfterOnload,expectedImageSourceCheck,responsiveScreenWidths,responsiveCell2GMaxWidth,responsiveCell3GMaxWidth,responsiveCell4GMaxWidth,loadDeferral,visibilityBuffer,legacyIOSVisibilityBuffer,imageFormats,skipHidden){var registeredImages=[];var responsiveScreenWidthIndex=-1;var loadComplete=false;var registerHandler=function(element,event,handler){if(undefined!==element.addEventListener){element.addEventListener(event,handler,false);}else{if(undefined!==element.attachEvent){element.attachEvent("on"+event,handler);}}};var unregisterHandler=function(element,event,handler){if(undefined!==element.removeEventListener){element.removeEventListener(event,handler,false);}else{if(undefined!==element.detachEvent){element.detachEvent("on"+event,handler);}}};var getWindowHeight=function(){if(undefined!==self.innerHeight){return self.innerHeight;}else{if(undefined!==document.documentElement&&undefined!==document.documentElement.clientHeight){return document.documentElement.clientHeight;}else{if(undefined!==document.body){return document.body.clientHeight;}}}};var getVerticalScrollPosition=function(){if(undefined!==document.documentElement&&document.documentElement.scrollTop){return document.documentElement.scrollTop;}else{if(undefined!==document.body){return document.body.scrollTop;}}};var isHidden=function(element){return skipHidden&&(element.offsetWidth<=0||element.offsetHeight<=0);};var getVerticalPosition=function(element){if(!element){return 0;}var verticalPosition=element.offsetTop;var parent=element;while(parent=parent.offsetParent){verticalPosition+=parent.offsetTop;}return verticalPosition;};var shouldLoadNow=function(img){switch(loadDeferral){case"onLoad":if(loadComplete){return true;}case"onVisible":return !isHidden(img)&&(getVerticalPosition(img)-getVerticalScrollPosition()-visibilityBuffer)<=getWindowHeight();case"instant":default:return true;}};var determineScreenWidthIndex=function(){var checkConnection=undefined!==navigator.connection&&undefined!=navigator.connection.type;var check2g=checkConnection&&(navigator.connection.type===navigator.connection.CELL_2G)&&-1!==responsiveCell2GMaxWidth;var check3g=checkConnection&&(check2g||navigator.connection.type===navigator.connection.CELL_3G)&&-1!==responsiveCell3GMaxWidth;var check4g=checkConnection&&(check2g||check3g||navigator.connection.type===navigator.connection.CELL_4G)&&-1!==responsiveCell4GMaxWidth;for(responsiveScreenWidthIndex=0;responsiveScreenWidthIndex<responsiveScreenWidths.length;++responsiveScreenWidthIndex){var currentWidth=responsiveScreenWidths[responsiveScreenWidthIndex];if(check2g&&responsiveCell2GMaxWidth<=currentWidth){break;}if(check3g&&responsiveCell3GMaxWidth<=currentWidth){break;}if(check4g&&responsiveCell4GMaxWidth<=currentWidth){break;}if(window.screen.availWidth<=currentWidth){break;}}};var loadImage=function(img,force){if(!img){return;}if(expectedImageSourceCheck&&force!=true){var currentSrc=img.getAttribute("src",true);if(currentSrc==null){currentSrc="";}if(currentSrc!="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAQAICRAEAOw=="){return;}}var source;var finalImage;var responsiveFormats;if(img.getAttribute("data-blzlqsrc")){finalImage=false;source=img.getAttribute("data-blzlqsrc");responsiveFormats=img.getAttribute("data-blzlqmsi");img.removeAttribute("data-blzlqsrc");img.removeAttribute("data-blzlqmsi");}else{finalImage=true;source=img.getAttribute("data-blzsrc");responsiveFormats=img.getAttribute("data-blzmsi");img.removeAttribute("data-blzsrc");img.removeAttribute("data-blzmsi");}if(null!==responsiveFormats&&responsiveFormats.length>responsiveScreenWidthIndex){var srcDotIndex=source.lastIndexOf(".");if(srcDotIndex>-1){source=source.substring(0,srcDotIndex)+"-"+responsiveScreenWidths[responsiveScreenWidthIndex]+"."+imageFormats[responsiveFormats.charAt(responsiveScreenWidthIndex)];}}if(!finalImage){var nextImageLoadHandler=function(){unregisterHandler(img,"load",nextImageLoadHandler);if(loadComplete){loadImage(img,true);}else{var nextImageDeferredLoadHandler=function(){unregisterHandler(window,"load",nextImageDeferredLoadHandler);loadImage(img,true);};registerHandler(window,"load",nextImageDeferredLoadHandler);}};registerHandler(img,"load",nextImageLoadHandler);}img.setAttribute("src",source);};var loadDynamicImages=function(){var deferredImages=[];for(var imageIndex=0;imageIndex<registeredImages.length;++imageIndex){var img=registeredImages[imageIndex];if(shouldLoadNow(img)){loadImage(img);}else{deferredImages.push(img);}}registeredImages=deferredImages;if(("onVisible"===loadDeferral||"onLoad"===loadDeferral)&&(registeredImages.length==0&&loadComplete)){unregisterHandler(window,"resize",loadDynamicImages);unregisterHandler(window,"scroll",loadDynamicImages);}};var registerDynamicImages=function(){registeredImages=[];for(var registeredImageIndex=0;registeredImageIndex<document.images.length;++registeredImageIndex){var img=document.images[registeredImageIndex];if(img.getAttribute("data-blzsrc")){registeredImages.push(img);}}};var repeatedRegisterAndCheck=function(){if(registeredPollAfterOnload||!loadComplete){registerDynamicImages();loadDynamicImages();}if(!loadComplete){setTimeout(repeatedRegisterAndCheck,100);}else{if(registeredPollAfterOnload){setTimeout(repeatedRegisterAndCheck,500);}}};determineScreenWidthIndex();setTimeout(repeatedRegisterAndCheck,100);if("onVisible"===loadDeferral||"onLoad"===loadDeferral){registerHandler(window,"resize",loadDynamicImages);registerHandler(window,"scroll",loadDynamicImages);}registerHandler(window,"load",function(){loadComplete=true;registerDynamicImages();loadDynamicImages();});repeatedRegisterAndCheck();}
+//]]></script><script blzsys="1" type="text/javascript">var aFeoApplied=true;</script><script blzsys="1" type="text/javascript">//<![CDATA[
+BlzDynamicImageLoader(true,true,[128,240,320,480],128,320,480,"onVisible",100,1000,["png","gif","jpg","webp","jxr","bmp","jp2"],false);
+//]]></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1039.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<!-- SVG gradients helper classes -->
+	<style type="text/css">
+		/* NOTE: This styles can't be in a external stylesheet due to browsers bug */
+		.no-touchevents .hover-icon-with-gradient-blue-to-green:hover .hover-icon svg path {
+			fill: url('#gradient-blue-to-green');
+		}
+	</style>
+
+	<title>Personal Banking &#8211; Standard Chartered Singapore</title>
+<link rel='dns-prefetch' href='//preview.standardchartered.com' />
+<link rel='dns-prefetch' href='//sc.com' />
+<link rel='stylesheet' id='videojs-css'  href='https://av.sc.com/assets/global/css/vendor.css' type='text/css' media='all' />
+<link rel='stylesheet' id='sc_retail-style-css'  href='https://av.sc.com/assets/global/css/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='sg-styles-css'  href='https://av.sc.com/assets/sg/css/styles.css' type='text/css' media='all' />
+<link rel="stylesheet" href="./interview.css"/>
+<script type='text/javascript' src='https://av.sc.com/assets/global/js/vendor/jquery.min.js?ver=3.1.0'></script>
+<script type='text/javascript' src='https://av.sc.com/assets/global/js/utils.js'></script>
+<script type='text/javascript' src='https://av.sc.com/assets/global/js/head.min.js'></script>
+			<meta name="sc:country" content="sg" />
+
+				<meta name="sc:segment" content="personal" />
+
+
+
+
+			<meta name="sc:page-slug" content="personal" />
+		<link rel="icon" href="https://av.sc.com/sg/content/images/cropped-TrustMark-512px-2-50x50.png" sizes="32x32" />
+<link rel="icon" href="https://av.sc.com/sg/content/images/cropped-TrustMark-512px-2-228x228.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://av.sc.com/sg/content/images/cropped-TrustMark-512px-2-228x228.png" />
+<meta name="msapplication-TileImage" content="https://av.sc.com/sg/content/images/cropped-TrustMark-512px-2-295x295.png" />
+<script src="https://unpkg.com/vue"></script>
+</head>
+<body class="page-template-default page page-id-13518" data-catch="show-overlay" >
+	<div id="app">
+
+	<header class="m-header final" data-action="close-navigation">
+  <div class="content-wrapper">
+    <nav class="m-meganav m-meganav-mobile final" data-catch="open-meganav-menu|close-meganav-menu|toggle-login-menu|open-login-menu|close-login-menu|show-country-selector|show-overlay|null">
+  <div class="meganav-menu"  data-mobile-layout="meganav-menu-mobile" data-catch="enter-tab|leave-tab|switch-tab|switch-location-tab">
+  <div class="meganav-opener" data-send="open-meganav-menu" >
+  <button class="c-button is-reset">
+    <span class="c-icon icon-menu-hamburger" data-grunticon-embed></span>
+  </button>
+</div>
+
+  <div class="meganav-mini" data-catch="close-sublevel">
+    <button class="c-button is-reset back-button" data-send="close-sublevel"></button>
+    <div class="current-position">
+      <button class="c-button is-reset" data-send="switch-location-tab"><span class="segment-loc-mobile">Personal banking in</span> Singapore</button>
+      <span class="text"></span>
+    </div>
+    <button class="c-button is-reset close-button" data-send="close-meganav-menu"></button>
+  </div>
+  <div class="meganav-tab is-home">
+    <a href="https://www.sc.com/sg/" class="c-button" title="Home" data-context="Meganav Links Home">
+    <span class="c-icon icon-sc-home-1" data-grunticon-embed></span>
+    </a>
+  </div>
+  <div class="meganav-tab is-location" data-send="enter-tab|leave-tab|switch-tab">
+    <button class="c-button tab-button is-reset">
+      <span class="text">You're in <span class="highlighted segment-loc"></span></span>
+      <span class="c-icon icon-varrow" data-grunticon-embed></span>
+    </button>
+    <div class="meganav-contents" data-send="null">
+      <div class="item has-two-levels" data-content="segment-location" data-catch="click-location|click-segment">
+  <div class="item-content">
+    <div class="right-wrapper">
+      <div class="responsive-bricklist">
+        <a class="block-item" title="Personal Banking" data-page="personal" data-send="click-segment" href="https://www.sc.com/sg/personal" data-context="Meganav Links Segments">
+          <span class="name">Personal Banking</span>
+          <span class="c-icon icon-personal-banking" data-grunticon-embed></span>
+        </a>
+        <a class="block-item" title="Business Banking" data-page="business" data-send="click-segment" href="https://www.sc.com/sg/business" data-context="Meganav Links Segments">
+          <span class="name">Business Banking</span>
+          <span class="c-icon icon-business-banking" data-grunticon-embed></span>
+        </a>
+        <a class="block-item" title="Priority Banking" data-page="priority" data-send="click-segment" href="https://www.sc.com/sg/priority" data-context="Meganav Links Segments">
+          <span class="name">Priority Banking</span>
+          <span class="c-icon icon-sc-s-online-rewards" data-grunticon-embed></span>
+        </a>
+        <a class="block-item" title="Corporate Banking" data-page="business-banking.html" data-send="click-segment" target="_blank" href="https://www.sc.com/en/banking-services/business-banking.html" data-context="Meganav Links Segments">
+          <span class="name">Corporate Banking</span>
+          <span class="c-icon icon-corporate-banking" data-grunticon-embed></span>
+        </a>
+        <a class="block-item" title="Private Banking" data-page="en" data-send="click-segment" target="_blank" href="https://www.sc.com/privatebank/en" data-context="Meganav Links Segments">
+          <span class="name">Private Banking</span>
+          <span class="c-icon icon-private-banking" data-grunticon-embed></span>
+        </a>
+    <a class="block-item" title="Commercial Banking" data-page="business-banking.html" data-send="click-segment" target="_blank" href="https://www.sc.com/en/banking-services/business-banking.html" data-context="Meganav Links Segments">
+          <span class="name">Commercial Banking</span>
+          <span class="c-icon icon-commercial-banking" data-grunticon-embed></span>
+        </a>
+      </div>
+      <div class="location-selector" data-send="click-location">
+        <div class="block-item">
+          <a class="text" title="Country" href="#null" data-context="Meganav Links Location Selector">You are in <span class="location-place">Singapore</span></a>
+          <span class="c-icon icon-arrow-3" data-grunticon-embed></span>
+       </div>
+        <span class="link-text">Change country</span>
+      </div>
+    </div>
+    <div class="left-wrapper">
+      <div class="responsive-list has-buttons" data-desktop-layout="section-combo" data-mobile-layout="section-combo-mobile">
+        <div class="section">
+          <span class="link-text">Segment &amp; Country</span>
+          <div class="section-label">
+            Welcome to <br>Standard Chartered
+          </div>
+
+          <div class="section-combo">
+            <div class="combo-current" data-send="show-country-selector">
+              <span class="combo-current-label">Singapore</span>
+              <span class="c-icon icon-arrow-3" data-grunticon-embed></span>
+            </div>
+      <div class="c-country-selector" data-send="null" data-catch="select-country" data-modal-id="country-selector">
+  <div class="c-input-box search" data-send="null">
+  <label class="wrapper">
+    <input type="text" class="input" id="country" name="country" placeholder="Enter country" />
+    <span class="icon-mobile">
+      <span class="c-icon icon-flag" data-grunticon-embed></span>
+
+    </span>
+    <span class="icon-desktop">
+      <span class="c-icon icon-search" data-grunticon-embed></span>
+
+    </span>
+  </label>
+</div>
+
+  <div class="c-combo-list" data-send="null">
+  <ul class="items list">
+      <li class="item" data-value="AGO"><a href="https://www.sc.com/ao/" class="name country-link" title="Angola" data-context="Meganav Links Country Selector Items">Angola</a></li>
+      <li class="item" data-value="ARG"><a href="https://www.sc.com/ar/en/" class="name country-link" title="Angola" data-context="Meganav Links Country Selector Items">Argentina</a></li>
+    <li class="item" data-value="AUS"><a href="https://www.sc.com/au/en/" class="name country-link" title="Australia" data-context="Meganav Links Country Selector Items">Australia</a></li>
+      <li class="item" data-value="BHR"><a href="https://www.sc.com/bh" class="name country-link" title="Bahrain" data-context="Meganav Links Country Selector Items">Bahrain</a></li>
+      <li class="item" data-value="BGD"><a href="https://www.sc.com/bd" class="name country-link" title="Bangladesh" data-context="Meganav Links Country Selector Items">Bangladesh</a></li>
+      <li class="item" data-value="BWA"><a href="https://www.sc.com/bw/index.html" class="name country-link" title="Botswana" data-context="Meganav Links Country Selector Items">Botswana</a></li>
+      <li class="item" data-value="BRA"><a href="https://www.sc.com/br/en/" class="name country-link" title="Brazil" data-context="Meganav Links Country Selector Items">Brazil</a></li>
+      <li class="item" data-value="BRN"><a href="https://www.sc.com/bn/en/" class="name country-link" title="Brunei Darussalam" data-context="Meganav Links Country Selector Items">Brunei Darussalam</a></li>
+      <li class="item" data-value="KHM"><a href="https://www.sc.com/kh/en/" class="name country-link" title="Cambodia" data-context="Meganav Links Country Selector Items">Cambodia</a></li>
+      <li class="item" data-value="CMR"><a href="https://www.sc.com/cm/en/" class="name country-link" title="Cameroon" data-context="Meganav Links Country Selector Items">Cameroon</a></li>
+      <li class="item" data-value="CHL"><a href="https://www.sc.com/cl/en/" class="name country-link" title="Chile" data-context="Meganav Links Country Selector Items">Chile</a></li>
+      <li class="item" data-value="CHN"><a href="http://www.standardchartered.com.cn/en/" class="name country-link" title="China" data-context="Meganav Links Country Selector Items">China</a></li>
+      <li class="item" data-value="COL"><a href="https://www.sc.com/co/en/" class="name country-link" title="Colombia" data-context="Meganav Links Country Selector Items">Colombia</a></li>
+     <li class="item" data-value="CHN"><a href="https://www.sc.com/ci/en/" class="name country-link" title="Cote d'Ivoire" data-context="Meganav Links Country Selector Items">Cote d'Ivoire</a></li>
+      <li class="item" data-value="FLK"><a href="https://www.sc.com/fk/index.html" class="name country-link" title="Falkland Islands" data-context="Meganav Links Country Selector Items">Falkland Islands</a></li>
+      <li class="item" data-value="FRA"><a href="https://www.sc.com/fr/en" class="name country-link" title="France" data-context="Meganav Links Country Selector Items">France</a></li>
+      <li class="item" data-value="DEU"><a href="https://www.sc.com/de/en" class="name country-link" title="Germany" data-context="Meganav Links Country Selector Items">Germany</a></li>
+      <li class="item" data-value="GHA"><a href="https://www.sc.com/gh/index.html" class="name country-link" title="Ghana" data-context="Meganav Links Country Selector Items">Ghana</a></li>
+      <li class="item" data-value="HKG"><a href="https://www.sc.com/hk/index.html" class="name country-link" title="Hong Kong" data-context="Meganav Links Country Selector Items">Hong Kong</a></li>
+      <li class="item" data-value="IND"><a href="https://www.sc.com/in/index.html" class="name country-link" title="India" data-context="Meganav Links Country Selector Items">India</a></li>
+      <li class="item" data-value="IDN"><a href="https://www.sc.com/id/en/" class="name country-link" title="Indonesia" data-context="Meganav Links Country Selector Items">Indonesia</a></li>
+      <li class="item" data-value="IRL"><a href="https://www.sc.com/ie/en" class="name country-link" title="Ireland" data-context="Meganav Links Country Selector Items">Ireland</a></li>
+      <li class="item" data-value="ITA"><a href="https://www.sc.com/it/en" class="name country-link" title="Italy" data-context="Meganav Links Country Selector Items">Italy</a></li>
+      <li class="item" data-value="JPN"><a href="https://www.sc.com/jp/jp/index.html" class="name country-link" title="Japan" data-context="Meganav Links Country Selector Items">Japan</a></li>
+      <li class="item" data-value="JEY"><a href="https://www.sc.com/je/en" class="name country-link" title="Jersey" data-context="Meganav Links Country Selector Items">Jersey</a></li>
+      <li class="item" data-value="JOR"><a href="https://www.sc.com/jo/en" class="name country-link" title="Jordan" data-context="Meganav Links Country Selector Items">Jordan</a></li>
+      <li class="item" data-value="KEN"><a href="https://www.sc.com/ke/" class="name country-link" title="Kenya" data-context="Meganav Links Country Selector Items">Kenya</a></li>
+      <li class="item" data-value="VTA"><a href="https://www.sc.com/la/en/" class="name country-link" title="Laos" data-context="Meganav Links Country Selector Items">Laos</a></li>
+      <li class="item" data-value="LBN"><a href="https://www.sc.com/lb/en" class="name country-link" title="Lebanon" data-context="Meganav Links Country Selector Items">Lebanon</a></li>
+      <li class="item" data-value="MFM"><a href="https://www.sc.com/mo/" class="name country-link" title="Macau" data-context="Meganav Links Country Selector Items">Macau</a></li>
+      <li class="item" data-value="MYS"><a href="https://www.sc.com/my/" class="name country-link" title="Malaysia" data-context="Meganav Links Country Selector Items">Malaysia</a></li>
+      <li class="item" data-value="MUS"><a href="https://www.sc.com/mu/en/" class="name country-link" title="Mauritius" data-context="Meganav Links Country Selector Items">Mauritius</a></li>
+      <li class="item" data-value="MEX"><a href="https://www.sc.com/mx/en/" class="name country-link" title="Mexico" data-context="Meganav Links Country Selector Items">Mexico</a></li>
+      <li class="item" data-value="MMR"><a href="https://www.sc.com/en/about-us/standard-chartered-worldwide/asia/myanmar.html" class="name country-link" title="Myanmar" data-context="Meganav Links Country Selector Items">Myanmar</a></li>
+      <li class="item" data-value="NPL"><a href="https://www.sc.com/np/en/" class="name country-link" title="Nepal" data-context="Meganav Links Country Selector Items">Nepal</a></li>
+      <li class="item" data-value="NGA"><a href="https://www.sc.com/ng/en/" class="name country-link" title="Nigeria" data-context="Meganav Links Country Selector Items">Nigeria</a></li>
+      <li class="item" data-value="OMN"><a href="https://www.sc.com/om/en" class="name country-link" title="Oman" data-context="Meganav Links Country Selector Items">Oman</a></li>
+      <li class="item" data-value="PAK"><a href="https://www.sc.com/pk/index.html" class="name country-link" title="Pakistan" data-context="Meganav Links Country Selector Items">Pakistan</a></li>
+      <li class="item" data-value="PER"><a href="https://www.sc.com/pe/en/" class="name country-link" title="Peru" data-context="Meganav Links Country Selector Items">Peru</a></li>
+      <li class="item" data-value="PHL"><a href="https://www.sc.com/ph/en/" class="name country-link" title="Philippines" data-context="Meganav Links Country Selector Items">Philippines</a></li>
+      <li class="item" data-value="QAT"><a href="https://www.sc.com/qa/en" class="name country-link" title="Qatar" data-context="Meganav Links Country Selector Items">Qatar</a></li>
+      <li class="item" data-value="SGP"><a href="https://www.sc.com/sg/index.html" class="name country-link" title="Singapore" data-context="Meganav Links Country Selector Items">Singapore</a></li>
+      <li class="item" data-value="SLE"><a href="https://www.sc.com/sl/en/" class="name country-link" title="Sierra Leone" data-context="Meganav Links Country Selector Items">Sierra Leone</a></li>
+      <li class="item" data-value="ZAF"><a href="https://www.sc.com/za/en/" class="name country-link" title="South Africa" data-context="Meganav Links Country Selector Items">South Africa</a></li>
+      <li class="item" data-value="KOR"><a href="http://www.standardchartered.co.kr/np/en/EnIntro.jsp?PARAM_LANG_CODE=EN" class="name country-link" title="South Korea" data-context="Meganav Links Country Selector Items">South Korea</a></li>
+      <li class="item" data-value="LKA"><a href="https://www.sc.com/lk/en/" class="name country-link" title="Sri Lanka" data-context="Meganav Links Country Selector Items">Sri Lanka</a></li>
+      <li class="item" data-value="SWE"><a href="https://www.sc.com/se/en" class="name country-link" title="Sweden" data-context="Meganav Links Country Selector Items">Sweden</a></li>
+      <li class="item" data-value="TWN"><a href="https://www.sc.com/tw/" class="name country-link" title="Taiwan" data-context="Meganav Links Country Selector Items">Taiwan</a></li>
+      <li class="item" data-value="TZA"><a href="https://www.sc.com/tz/en/" class="name country-link" title="Tanzania" data-context="Meganav Links Country Selector Items">Tanzania</a></li>
+      <li class="item" data-value="THA"><a href="https://www.sc.com/th/en/index.html" class="name country-link" title="Thailand" data-context="Meganav Links Country Selector Items">Thailand</a></li>
+      <li class="item" data-value="GMB"><a href="https://www.sc.com/gm/en/" class="name country-link" title="The Gambia" data-context="Meganav Links Country Selector Items">The Gambia</a></li>
+      <li class="item" data-value="TUR"><a href="https://www.sc.com/tr/en/" class="name country-link" title="Turkey" data-context="Meganav Links Country Selector Items">Turkey</a></li>
+      <li class="item" data-value="UGA"><a href="https://www.sc.com/ug/en/" class="name country-link" title="Uganda" data-context="Meganav Links Country Selector Items">Uganda</a></li>
+      <li class="item" data-value="ARE"><a href="https://www.sc.com/ae" class="name country-link" title="United Arab Emirates" data-context="Meganav Links Country Selector Items">United Arab Emirates</a></li>
+      <li class="item" data-value="GBR"><a href="https://www.sc.com/uk" class="name country-link" title="United Kingdom" data-context="Meganav Links Country Selector Items">United Kingdom</a></li>
+      <li class="item" data-value="USA"><a href="https://www.sc.com/us/en/" class="name country-link" title="United States" data-context="Meganav Links Country Selector Items">United States</a></li>
+      <li class="item" data-value="SGN"><a href="https://www.sc.com/vn/en/" class="name country-link" title="Vietnam" data-context="Meganav Links Country Selector Items">Vietnam</a></li>
+      <li class="item" data-value="ZMB"><a href="https://www.sc.com/zm/index.html" class="name country-link" title="Zambia" data-context="Meganav Links Country Selector Items">Zambia</a></li>
+      <li class="item" data-value="ZWE"><a href="https://www.sc.com/zw/en/" class="name country-link" title="Zimbabwe" data-context="Meganav Links Country Selector Items">Zimbabwe</a></li>
+  </ul>
+</div>
+
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div class="meganav-tab is-products" data-send="enter-tab|leave-tab|switch-tab">
+    <button class="c-button tab-button is-reset">
+      <span class="c-icon icon-investments" data-grunticon-embed></span>
+      <span class="text">Our Products</span>
+      <span class="c-icon icon-varrow" data-grunticon-embed></span>
+    </button>
+    <div class="meganav-contents" data-send="null">
+      <div class="item is-large has-two-levels" data-content="services" data-catch="enter-subproduct|click-subproduct">
+  <div class="item-content">
+    <div class="right-wrapper">
+      <div class="responsive-list" data-desktop-layout="column-list" data-mobile-layout="categorized-list-mobile">
+        <div class="section" data-subproduct="account-deposits-individuals" data-catch="filter-subproducts">
+          <div class="section-col">
+        <h2>Current Accounts</h2>
+        <ul class="list-link">
+          <li class="link-item">
+            <a title="Bonus$aver" class="link" href="https://www.sc.com/sg/save/current-accounts/bonussaver" data-category="save" data-context="Meganav Links Products" data-page="bonussaver">
+              <span class="text">Bonus$aver</span>
+            </a>
+            <p class="message">Up to 3.88% p.a. interest on your first S$100,000 deposit</p>
+          </li>
+          <li class="link-item">
+            <a title="SuperSalary" class="link" href="https://www.sc.com/sg/save/current-accounts/supersalary" data-category="save" data-context="Meganav Links Products" data-page="supersalary">
+              <span class="text">SuperSalary</span>
+            </a>
+            <p class="message">Enjoy 1.1% p.a interest on your salary account</p>
+          </li>
+            </ul>
+      </div>
+      <div class="section-col">
+        <h2>Savings Accounts</h2>
+        <ul class="list-link">
+                               <li class="link-item">
+            <a title="myway" class="link" href="https://www.sc.com/sg/save/savings-accounts/myway/" data-category="save" data-context="Meganav Links Products" data-page="myway">
+              <span class="text">MyWay Savings Account</span>
+            </a>
+            <p class="message">Earn up to 1.28%p.a. with no lock-in</p>
+          </li>
+          <li class="link-item">
+            <a title="e$aver" class="link" href="https://www.sc.com/sg/save/savings-accounts/esaver" data-category="save" data-context="Meganav Links Products" data-page="esaver">
+              <span class="text">e$aver</span>
+            </a>
+            <p class="message">Earn up to 1.20% p.a. without locking in your money</p>
+          </li>
+          <!--<li class="link-item">
+            <a title="e$aver Kids" class="link" href="https://www.sc.com/sg/save/savings-accounts/esaver-kids" data-category="save" data-context="Meganav Links Products" data-page="esaver-kids">
+              <span class="text">e$aver Kids</span>
+            </a>
+            <p class="message">No fixed term, no minimum deposit, no minimum balance</p>
+          </li>-->
+            </ul>
+      </div>
+      <div class="section-col no-separator">
+        <h2>Time Deposits</h2>
+        <ul class="list-link">
+          <li class="link-item">
+            <a title="Singapore Dollar Time Deposit" class="link" href="https://www.sc.com/sg/save/time-deposits/singapore-dollar-time-deposit" data-category="save" data-context="Meganav Links Products" data-page="singapore-dollar-time-deposit">
+              <span class="text">Singapore Dollar Time Deposit</span>
+            </a>
+            <p class="message">Earn up to 0.90% p.a. interest with minimum $25,000</p>
+          </li>
+          <li class="link-item">
+            <a title="Foreign Currency Time Deposit" class="link" href="https://www.sc.com/sg/save/time-deposits/foreign-currency-time-deposits" data-category="save" data-context="Meganav Links Products" data-page="foreign-currency-time-deposits">
+              <span class="text">Foreign Currency Time Deposit</span>
+            </a>
+            <p class="message">Attractive interest rates across a range of currency types</p>
+          </li>
+            </ul>
+      </div>
+      <div class="section-view-all">
+        <a title="All Individual Accounts &amp; Deposits" href="https://www.sc.com/sg/save" class="view-all" data-category="save" data-context="Meganav Links Products" data-page="save">
+          <span class="text">View All Accounts &amp; Deposits</span>
+          <span class="icon icon-arrow-right" data-grunticon-embed></span>
+        </a>
+      </div>
+        </div>
+        <div class="section" data-subproduct="credit-debit-individuals" data-catch="filter-subproducts">
+      <div class="section-col">
+          <h2>Cashback</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Unlimited Cashback Card" class="link" href="https://www.sc.com/sg/credit-cards/unlimited-cashback-credit-card" data-category="credit-cards" data-context="Meganav Links Products" data-page="unlimited-cashback-credit-card">
+                <span class="text">Unlimited Cashback Card</span>
+              </a>
+              <p class="message">Score unlimited cashback on all spend</p>
+            </li>
+            <li class="link-item">
+              <a title="SingPost Platinum Visa Card" class="link" href="https://www.sc.com/sg/credit-cards/singpost-platinum-visa-card" data-category="credit-cards" data-context="Meganav Links Products" data-page="singpost-platinum-visa-card">
+                <span class="text">SingPost Platinum Visa Card</span>
+              </a>
+              <p class="message">Shop smarter online with the card that delivers the most</p>
+            </li>
+              </ul>
+        </div>
+        <div class="section-col">
+          <h2>Rewards</h2>
+          <ul class="list-link">
+          <li class="link-item">
+              <a title="Priority Visa Infinite Card" class="link" href="https://www.sc.com/sg/credit-cards/priority-visa-infinite-card" data-category="credit-cards" data-context="Meganav Links Products" data-page="priority-visa-infinite-card">
+                <span class="text">Priority Visa Infinite Card</span>
+              </a>
+              <p class="message">Earn 2.5 Reward Points for every $1 charged to your credit card</p>
+            </li>
+            <li class="link-item">
+              <a title="Platinum Visa/MasterCard" class="link" href="https://www.sc.com/sg/credit-cards/platinum-visa-mastercard-card" data-category="credit-cards" data-context="Meganav Links Products" data-page="platinum-visa-mastercard-card">
+                <span class="text">Platinum Visa/MasterCard</span>
+              </a>
+              <p class="message">Enjoy exciting privileges and earn Rewards Points</p>
+            </li>
+              </ul>
+        </div>
+        <div class="section-col no-separator">
+          <h2>Travel</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Visa Infinite Card" class="link" href="https://www.sc.com/sg/credit-cards/visa-infinite-card" data-category="credit-cards" data-context="Meganav Links Products" data-page="visa-infinite-card">
+                <span class="text">Visa Infinite Card</span>
+              </a>
+              <p class="message">Go further with up to 3 miles for every dollar spent</p>
+            </li>
+            <li class="link-item">
+              <a title="Tigerair Platinum Card" class="link" href="https://www.sc.com/sg/credit-cards/tigerair-platinum-card" data-category="credit-cards" data-context="Meganav Links Products" data-page="tigerair-platinum-card">
+                <span class="text">Tigerair Platinum Card</span>
+              </a>
+              <p class="message">The faster way to more holidays</p>
+            </li>
+              </ul>
+        </div>
+        <div class="section-view-all">
+          <a title="All Individual Credit Cards" href="https://www.sc.com/sg/credit-cards" class="view-all" data-category="credit-cards" data-context="Meganav Links Products" data-page="credit-cards">
+            <span class="text">View All Credit Cards</span>
+            <span class="icon icon-arrow-right" data-grunticon-embed></span>
+          </a>
+        </div>
+        </div>
+        <div class="section" data-subproduct="loan-mortgages-individuals" data-catch="filter-subproducts">
+      <div class="section-col">
+          <h2>Home &amp; Property Loans</h2>
+          <ul class="list-link">
+          <li class="link-item">
+              <a title="MortgageOne SIBOR" class="link" href="https://www.sc.com/sg/borrow/mortgages/mortgageone-sibor" data-category="borrow" data-context="Meganav Links Products" data-page="mortgageone-sibor">
+                <span class="text">MortgageOne SIBOR</span>
+              </a>
+              <p class="message">Offset your loan interest from interest earned on deposits</p>
+            </li>
+            <li class="link-item">
+              <a title="Home Suite" class="link" href="https://www.sc.com/sg/borrow/mortgages/home-suite" data-category="borrow" data-context="Meganav Links Products" data-page="home-suite">
+                <span class="text">Home Suite</span>
+              </a>
+              <p class="message">Build your home with a bundle of perks</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-col">
+          <h2>HDB Home Loans</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="HDB Home Suite" class="link" href="https://www.sc.com/sg/borrow/mortgages/hdb-home-suite" data-category="borrow" data-context="Meganav Links Products" data-page="hdb-home-suite">
+                <span class="text">HDB Home Suite</span>
+              </a>
+              <p class="message">HDB Home Suite offers you more than just a home loan</p>
+            </li>
+            <li class="link-item">
+              <a title="HDB Bridging Loan" class="link" href="https://www.sc.com/sg/borrow/mortgages/hdb-bridging-loan" data-category="borrow" data-context="Meganav Links Products" data-page="hdb-bridging-loan">
+                <span class="text">HDB Bridging Loan</span>
+              </a>
+              <p class="message">Selling and buying your HDB flat</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-col no-separator">
+          <h2>Personal Loans</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="CashOne" class="link" href="https://www.sc.com/sg/borrow/loans/cashone" data-category="borrow" data-context="Meganav Links Products" data-page="cashone">
+                <span class="text">CashOne</span>
+              </a>
+              <p class="message">Get cash the very next working day</p>
+            </li>
+            <li class="link-item">
+              <a title="Debt Consolidation" class="link" href="https://www.sc.com/sg/borrow/loans/debt-consolidation" data-category="borrow" data-context="Meganav Links Products" data-page="debt-consolidation">
+                <span class="text">Debt Consolidation</span>
+              </a>
+              <p class="message">Free yourself from higher interest payments</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-view-all">
+          <a title="All Individual Loans &amp; Mortgages" href="https://www.sc.com/sg/borrow" class="view-all" data-category="borrow" data-context="Meganav Links Products" data-page="borrow">
+            <span class="text">View All Loans &amp; Mortgages</span>
+            <span class="icon icon-arrow-right" data-grunticon-embed></span>
+          </a>
+        </div>
+        </div>
+        <div class="section" data-subproduct="investments-individuals">
+      <div class="section-col">
+          <h2>Ways to Invest</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Unit Trusts" class="link" href="https://www.sc.com/sg/investment/unit-trusts" data-category="investment" data-context="Meganav Links Products" data-page="unit-trusts">
+                <span class="text">Unit Trusts</span>
+              </a>
+              <p class="message">Select from over 300 funds</p>
+            </li>
+            <li class="link-item">
+              <a title="Premium Currency Investment" class="link" href="https://www.sc.com/sg/investment/premium-currency-investment" data-category="investment" data-context="Meganav Links Products" data-page="premium-currency-investments">
+                <span class="text">Premium Currency Investment</span>
+              </a>
+              <p class="message">Select from over 60 currency pairs</p>
+            </li>
+          <li class="link-item">
+              <a title="Structured Deposits" class="link" href="https://www.sc.com/sg/investment/structured-deposits" data-category="investment" data-context="Meganav Links Products" data-page="structured-deposits">
+                <span class="text">Structured Deposits</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      <div class="section-col">
+      <h2 class="empty">&nbsp;</h2>
+      <ul class="list-link">
+        <li class="link-item">
+          <a title="Secured Wealth Lending" class="link" href="https://www.sc.com/sg/investment/secured-wealth-lending" data-category="investment" data-context="Meganav Links Products" data-page="secured-wealth-lending">
+            <span class="text">Secured Wealth Lending</span>
+          </a>
+          <p class="message">Financial flexibility</p>
+        </li>
+        <li class="link-item">
+          <a title="Insurance Savings Plan" class="link" href="https://www.sc.com/sg/insurance/insurance-savings-plan" data-category="investment" data-context="Meganav Links Products" data-page="insurance-savings-plan">
+            <span class="text">Insurance Savings Plan</span>
+          </a>
+          <p class="message">Save with regular payments</p>
+        </li>
+    </ul>
+    </div>
+        <div class="section-col">
+          <h2>Tools to Help</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Online Unit Trust" class="link" href="https://www.sc.com/sg/investment/online-unit-trusts" data-category="investment" data-context="Meganav Links Products" data-page="online-unit-trusts">
+                <span class="text">Online Unit Trust</span>
+              </a>
+            </li>
+            <li class="link-item">
+              <a title="Onine Trading" class="link" href="https://www.sc.com/sg/investment/online-trading" data-category="investment" data-context="Meganav Links Products" data-page="online-trading">
+                <span class="text">Online Trading</span>
+              </a>
+            </li>
+          <li class="link-item">
+              <a title="Latest Market Insights" class="link" href="https://www.sc.com/retail/mce/index.html#/landing?lang=en&ctry=SG&channel=PLRB&sapp=PUB" data-category="mce" data-context="Meganav Links Products" data-page="latest-market-insights">
+                <span class="text">Latest Market Insights</span>
+              </a>
+            </li>
+          <li class="link-item">
+              <a title="Quarterly Funds Select List" class="link" href="https://www.sc.com/global/av/sg-scb-fund-select-list-q1-2017.pdf" data-category="av" data-context="Meganav Links Products" data-page="sg-scb-fund-select-list-q1-2017">
+                <span class="text">Quarterly Funds Select List</span>
+              </a>
+            </li>
+          <li class="link-item">
+              <a title="Fund Library" class="link" href="https://hk.morningstar.com/SCB-SG-PUB/(S(camgvkq2bxpxhafezrze3545))/FundLibrary/LandingPage.aspx?language=en" data-category="products" data-context="Meganav Links Products" data-page="LandingPage.aspx">
+                <span class="text">Fund Library</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section-view-all">
+          <a title="All Individual Investments Solutions" href="https://www.sc.com/sg/investment" class="view-all" data-category="investment" data-context="Meganav Links Products" data-page="investment">
+            <span class="text">View All Investments</span>
+            <span class="icon icon-arrow-right" data-grunticon-embed></span>
+          </a>
+        </div>
+        </div>
+        <div class="section" data-subproduct="insurance-individuals">
+      <div class="section-col">
+          <h2>Insurance</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Health" class="link" href="https://www.sc.com/sg/insurance/health-insurance" data-category="insurance" data-context="Meganav Links Products" data-page="health-insurance">
+                <span class="text">Health</span>
+              </a>
+              <p class="message">Coverage for medical costs</p>
+            </li>
+            <li class="link-item">
+              <a title="Insurance Savings Plan" class="link" href="https://www.sc.com/sg/insurance/insurance-savings-plan" data-category="insurance" data-context="Meganav Links Products" data-page="insurance-savings-plan">
+                <span class="text">Insurance Savings Plan</span>
+              </a>
+              <p class="message">Save with regular payments</p>
+            </li>
+          <li class="link-item">
+              <a title="Children's Education" class="link" href="https://www.sc.com/sg/insurance/childrens-education/give-your-children-a-headstart" data-category="insurance" data-context="Meganav Links Products" data-page="give-your-children-a-headstart">
+                <span class="text">Children's Education</span>
+              </a>
+              <p class="message">Save more for your children</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-col">
+          <h2 class="empty">&nbsp;</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Retirement" class="link" href="https://www.sc.com/sg/insurance/retirement" data-category="insurance" data-context="Meganav Links Products" data-page="retirement">
+                <span class="text">Retirement</span>
+              </a>
+              <p class="message">Save more for your retirement</p>
+            </li>
+            <li class="link-item">
+              <a title="Legacy" class="link" href="https://www.sc.com/sg/insurance/legacy/prulife-vantage-achiever" data-category="insurance" data-context="Meganav Links Products" data-page="prulife-vantage-achiever">
+                <span class="text">Legacy</span>
+              </a>
+              <p class="message">Regular premium endowment</p>
+            </li>
+          <li class="link-item">
+              <a title="Protection" class="link" href="https://www.sc.com/sg/insurance/mortgage-protection/prumortgage" data-category="insurance" data-context="Meganav Links Products" data-page="prumortgage">
+                <span class="text">Mortgage Protection</span>
+              </a>
+              <p class="message">Protect against the unexpected</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-col no-separator">
+          <h2 class="empty">&nbsp;</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Travel" class="link" href="/sg/insurance/travel/az-travel-protect/" data-category="insurance" data-context="Meganav Links Products" data-page="enhanced-travel-protector">
+                <span class="text">Travel</span>
+              </a>
+              <p class="message">Enjoy stress-free holidays</p>
+            </li>
+            <li class="link-item">
+              <a title="Motor/Auto" class="link" href="https://www.sc.com/sg/insurance/motor/ultimate-car-protector" data-category="insurance" data-context="Meganav Links Products" data-page="ultimate-car-protector">
+                <span class="text">Motor/Auto</span>
+              </a>
+              <p class="message">Comprehensive car protection</p>
+            </li>
+          <li class="link-item">
+              <a title="Personal Accident" class="link" href="https://www.sc.com/sg/insurance/personal-accident" data-category="insurance" data-context="Meganav Links Products" data-page="personal-accident">
+                <span class="text">Personal Accident</span>
+              </a>
+              <p class="message">Coverage for hospitalization</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-view-all">
+          <a title="All Individual Insurance Solutions" href="https://www.sc.com/sg/insurance" class="view-all" data-category="insurance" data-context="Meganav Links Products" data-page="insurance">
+            <span class="text">View All Insurance</span>
+            <span class="icon icon-arrow-right" data-grunticon-embed></span>
+          </a>
+        </div>
+        </div>
+
+        <div class="section" data-subproduct="account-deposits-companies" data-catch="filter-subproducts">
+      <div class="section-col">
+          <h2>Accounts</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="BusinessOne" class="link" href="https://www.sc.com/sg/business-accounts/businessone" data-category="business-accounts" data-context="Meganav Links Products" data-page="businessone">
+                <span class="text">BusinessOne</span>
+              </a>
+              <p class="message">A non-interest bearing account</p>
+            </li>
+            <li class="link-item">
+              <a title="Business$aver" class="link" href="https://www.sc.com/sg/business-accounts/businessaver" data-category="business-accounts" data-context="Meganav Links Products" data-page="businessaver">
+                <span class="text">Business$aver</span>
+              </a>
+              <p class="message">An interest bearing account</p>
+            </li>
+              </ul>
+        </div>
+        <div class="section-col">
+          <h2>Cash Management</h2>
+          <ul class="list-link">
+            <li class="link-item">
+             <a title="Smart Business Plan" class="link" href="https://www.sc.com/sg/business-cash-management-services/smart-business-plan" data-category="business-cash-management-services" data-context="Meganav Links Products" data-page="smart-business-plan">
+                <span class="text">Smart Business Plan</span>
+              </a>
+              <p class="message">An innovative pricing plan</p>
+            </li>
+              </ul>
+        </div>
+        <div class="section-col no-separator">
+          <h2>Channels/Access</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Business Debit Card" class="link" href="https://www.sc.com/sg/business-channels-access/business-debit-card" data-category="business-channels-access" data-context="Meganav Links Products" data-page="business-debit-card">
+                <span class="text">Business Debit Card</span>
+              </a>
+              <p class="message">MasterCard World Business Debit Card</p>
+            </li>
+            <li class="link-item">
+              <a title="Straight2Bank" class="link" href="https://www.sc.com/sg/business-channels-access/straight2bank" data-category="business-channels-access" data-context="Meganav Links Products" data-page="straight2bank">
+                <span class="text">Straight2Bank</span>
+              </a>
+              <p class="message">Online banking designed for businesses</p>
+            </li>
+              </ul>
+        </div>
+        <div class="section-view-all">
+          <a title="All Companies Accounts &amp; Cash Management Solutions" href="https://www.sc.com/sg/accounts-cash-management" class="view-all" data-category="accounts-cash-management" data-context="Meganav Links Products" data-page="accounts-cash-management">
+            <span class="text">View All Accounts &amp; Cash Management</span>
+            <span class="icon icon-arrow-right" data-grunticon-embed></span>
+          </a>
+        </div>
+        </div>
+        <div class="section" data-subproduct="loan-mortgages-companies" data-catch="filter-subproducts">
+          <div class="section-col">
+        <h2>Loans &amp; Working Capital</h2>
+        <ul class="list-link">
+          <li class="link-item">
+            <a title="Business Working Capital" class="link" href="https://www.sc.com/sg/business-loans-and-working-capital/business-working-capital" data-category="business-loans-and-working-capital" data-context="Meganav Links Products" data-page="business-working-capital">
+              <span class="text">Business Working Capital</span>
+            </a>
+            <p class="message">Financing solutions and trade services to help you grow</p>
+          </li>
+          <li class="link-item">
+            <a title="Business instalment loan solutions" class="link" href="https://www.sc.com/sg/business-loans-and-working-capital/business-instalment-loan" data-category="business-loans-and-working-capital" data-context="Meganav Links Products" data-page="business-instalment-loan">
+              <span class="text">Business Instalment Loan</span>
+            </a>
+            <p class="message">An unsecured term loan that offers up to S$300,000</p>
+          </li>
+        </ul>
+      </div>
+      <div class="section-col no-separator">
+        <h2>Government Schemes</h2>
+        <ul class="list-link">
+          <li class="link-item">
+            <a title="Loan Insurance Scheme" class="link" href="https://www.sc.com/sg/business-government-schemes/loan-insurance-scheme-lis" data-category="business-government-schemes" data-context="Meganav Links Products" data-page="loan-insurance-scheme-lis">
+              <span class="text">Loan Insurance Scheme</span>
+            </a>
+            <p class="message">Trade financing facilities for local companies</p>
+          </li>
+          <li class="link-item">
+            <a title="SME Working Capital Loan" class="link" href="https://www.sc.com/sg/business-government-schemes/sme-working-capital-loan-sme-wcl" data-category="business-government-schemes" data-context="Meganav Links Products" data-page="sme-working-capital-loan-sme-wcl">
+              <span class="text">SME Working Capital Loan</span>
+            </a>
+            <p class="message">Unsecured working capital for local companies</p>
+          </li>
+        </ul>
+      </div>
+      <div class="section-view-all">
+        <a title="All Companies Loans &amp; Government Schemes Solutions" href="https://www.sc.com/sg/loans-government-schemes" class="view-all" data-category="loans-government-schemes" data-context="Meganav Links Products" data-page="loans-government-schemes">
+          <span class="text">View All Loans &amp; Working Capital</span>
+          <span class="icon icon-arrow-right" data-grunticon-embed></span>
+        </a>
+      </div>
+        </div>
+        <div class="section" data-subproduct="banking-across-borders-companies">
+      <div class="section-col">
+          <h2>Global Banking</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="International Network" class="link" href="https://www.sc.com/sg/business-global-banking/international-network" data-category="business-global-banking" data-context="Meganav Links Products" data-page="international-network">
+                <span class="text">International Network</span>
+              </a>
+              <p class="message">Get access to our global network across over 25 markets</p>
+            </li>
+            <li class="link-item">
+              <a title="International Trade" class="link" href="https://www.sc.com/sg/business-global-banking/international-trade-services" data-category="business-global-banking" data-context="Meganav Links Products" data-page="international-trade-services">
+                <span class="text">International Trade</span>
+              </a>
+              <p class="message">Letter of Credit confirmation, bonds and other guarantees</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-col no-separator">
+          <h2>Currency Risk Mitigation</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Business FX Hedging" class="link" href="https://www.sc.com/sg/business-currency-risk-mitigation/business-fx-hedging" data-category="business-currency-risk-mitigation" data-context="Meganav Links Products" data-page="business-fx-hedging">
+                <span class="text">Business FX Hedging</span>
+              </a>
+              <p class="message">Protect your business from currency fluctuations and rates</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-view-all">
+          <a title="All Companies Banking Across Borders Solutions" href="https://www.sc.com/sg/business-global-banking" class="view-all" data-category="business-global-banking" data-context="Meganav Links Products" data-page="business-global-banking">
+            <span class="text">View All Banking Across Borders</span>
+            <span class="icon icon-arrow-right" data-grunticon-embed></span>
+          </a>
+        </div>
+        </div>
+        <div class="section" data-subproduct="insurance-companies">
+      <div class="section-col">
+          <h2>Business Protection</h2>
+          <ul class="list-link">
+          <li class="link-item">
+              <a title="Businesss Protection Insurance" class="link" href="https://www.sc.com/sg/business-insurance/business-protection-insurance" data-category="business-insurance" data-context="Meganav Links Products" data-page="business-protection-insurance">
+                <span class="text">Businesss Protection Insurance</span>
+              </a>
+            <p class="message">Protect the business assets which you have built</p>
+            </li>
+          </ul>
+        </div>
+      <div class="section-col no-separator">
+          <h2>Personal Protection</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Allianz Travel Protect" class="link" href="https://www.sc.com/sg/insurance/travel/az-travel-protect/" data-category="business-insurance" data-context="Meganav Links Products" data-page="enhanced-travel-protector">
+                <span class="text">Allianz Travel Protect</span>
+              </a>
+              <p class="message">Enjoy stress-free travel with single trip or annual plans</p>
+            </li>
+            <li class="link-item">
+              <a title="Ultimate Car Protector" class="link" href="https://www.sc.com/sg/business-insurance/personal-protection/ultimate-car-protector" data-category="business-insurance" data-context="Meganav Links Products" data-page="ultimate-car-protector">
+                <span class="text">Ultimate Car Protector</span>
+              </a>
+              <p class="message">Comprehensive protection for your car and car belongings</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-view-all">
+          <a title="All Companies Insurance solutions" href="https://www.sc.com/sg/business-insurance" class="view-all" data-category="business-insurance" data-context="Meganav Links Products" data-page="business-insurance">
+            <span class="text">View All Insurance</span>
+            <span class="icon icon-arrow-right" data-grunticon-embed></span>
+          </a>
+        </div>
+        </div>
+    <div class="section" data-subproduct="yield-enhancing-companies">
+      <div class="section-col no-separator">
+          <h2>Yield Enhancing</h2>
+          <ul class="list-link">
+            <li class="link-item">
+              <a title="Investments" class="link" href="https://www.sc.com/sg/business-yield-enhancing/investments" data-category="business-yield-enhancing" data-context="Meganav Links Products" data-page="investments">
+                <span class="text">Investments</span>
+              </a>
+              <p class="message">A range of investments customised for better returns</p>
+            </li>
+           <li class="link-item">
+              <a title="Business Time Deposits" class="link" href="https://www.sc.com/sg/business-yield-enhancing/business-time-deposits" data-category="business-yield-enhancing" data-context="Meganav Links Products" data-page="business-time-deposits">
+                <span class="text">Business Time Deposits</span>
+              </a>
+              <p class="message">Choose from a variety of tenure and currency options</p>
+            </li>
+          </ul>
+        </div>
+        <div class="section-view-all">
+          <a title="All Companies Yield Enhancing Solutions" href="https://www.sc.com/sg/business-yield-enhancing" class="view-all" data-category="business-yield-enhancing" data-context="Meganav Links Products" data-page="business-yield-enhancing">
+            <span class="text">View All Yield Enhancing</span>
+            <span class="icon icon-arrow-right" data-grunticon-embed></span>
+          </a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="left-wrapper">
+      <div class="responsive-list" data-desktop-layout="collapsable-menu" data-mobile-layout="simple-menu-mobile" data-catch="toggle-collapsable">
+        <div class="section is-expanded for-individuals">
+          <div class="section-label" data-send="toggle-collapsable">
+            <span class="text">For individuals</span>
+            <span class="icon icon-varrow only-desktop" data-grunticon-embed></span>
+          </div>
+          <ul class="section-list">
+            <li data-send="enter-subproduct|click-subproduct" data-subproduct="account-deposits-individuals">
+
+
+
+
+
+
+
+
+  <a title="Accounts & Deposits" href="#null" class="c-product-section-link list-item is-reset" data-context="Meganav Products Category" >
+    <span class="link-text">Accounts & Deposits
+
+  </span>
+
+  </a>
+
+            </li>
+            <li data-send="enter-subproduct|click-subproduct" data-subproduct="credit-debit-individuals">
+
+
+
+
+
+
+
+
+  <a title="Credit Cards" href="#null" class="c-product-section-link list-item is-reset" data-context="Meganav Products Category" >
+    <span class="link-text">Credit Cards
+
+  </span>
+
+  </a>
+
+            </li>
+            <li data-send="enter-subproduct|click-subproduct" data-subproduct="loan-mortgages-individuals">
+
+
+
+
+
+
+
+
+  <a title="Loans & Mortgages" href="#null" class="c-product-section-link list-item is-reset" data-context="Meganav Products Category" >
+    <span class="link-text">Loans & Mortgages
+
+  </span>
+
+  </a>
+
+            </li>
+            <li data-send="enter-subproduct|click-subproduct" data-subproduct="investments-individuals">
+
+
+
+
+
+
+
+
+  <a title="Investments" href="#null" class="c-product-section-link list-item is-reset" data-context="Meganav Products Category" >
+    <span class="link-text">Investments
+
+  </span>
+
+  </a>
+
+            </li>
+            <li data-send="enter-subproduct|click-subproduct" data-subproduct="insurance-individuals">
+
+
+
+
+
+
+
+
+  <a title="Insurance" href="#null" class="c-product-section-link list-item is-reset" data-context="Meganav Products Category" >
+    <span class="link-text">Insurance
+
+  </span>
+
+  </a>
+
+            </li>
+          </ul>
+        </div>
+        <div class="section for-companies">
+          <div class="section-label" data-send="toggle-collapsable">
+            <span class="text">For companies</span>
+            <span class="icon icon-varrow only-desktop" data-grunticon-embed></span>
+          </div>
+          <ul class="section-list">
+            <li data-send="enter-subproduct|click-subproduct" data-subproduct="account-deposits-companies">
+
+
+
+
+
+
+
+
+  <a title="Accounts & Cash Management" href="#null" class="c-product-section-link list-item is-reset" data-context="Meganav Products Category" >
+    <span class="link-text">Accounts & Cash Management
+
+  </span>
+
+  </a>
+
+            </li>
+            <li data-send="enter-subproduct|click-subproduct" data-subproduct="loan-mortgages-companies">
+
+
+
+
+
+
+
+
+  <a title="Loans & Government Schemes" href="#null" class="c-product-section-link list-item is-reset" data-context="Meganav Products Category" >
+    <span class="link-text">Loans & Government Schemes
+
+  </span>
+
+  </a>
+
+            </li>
+            <li data-send="enter-subproduct|click-subproduct" data-subproduct="banking-across-borders-companies">
+
+
+
+
+
+
+
+
+  <a title="Banking Across Borders" href="#null" class="c-product-section-link list-item is-reset" data-context="Meganav Products Category" >
+    <span class="link-text">Banking Across Borders
+
+  </span>
+
+  </a>
+
+            </li>
+            <li data-send="enter-subproduct|click-subproduct" data-subproduct="insurance-companies">
+
+
+
+
+
+
+
+
+  <a title="Business Insurance" href="#null" class="c-product-section-link list-item is-reset" data-context="Meganav Products Category" >
+    <span class="link-text">Business Insurance
+
+  </span>
+
+  </a>
+
+            </li>
+      <li data-send="enter-subproduct|click-subproduct" data-subproduct="yield-enhancing-companies">
+
+
+
+
+
+
+
+
+  <a title="Yield Enhancing" href="#null" class="c-product-section-link list-item is-reset" data-context="Meganav Products Category" >
+    <span class="link-text">Yield Enhancing
+
+  </span>
+
+  </a>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div class="meganav-tab is-promotions" data-send="enter-tab|leave-tab|switch-tab">
+    <button class="c-button tab-button is-reset">
+      <span class="c-icon icon-label" data-grunticon-embed></span>
+      <span class="text">Promotions</span>
+      <span class="c-icon icon-varrow" data-grunticon-embed></span>
+    </button>
+    <div class="meganav-contents" data-send="null">
+      <div class="item">
+  <div class="item-content">
+    <div class="right-wrapper">
+      <div class="responsive-list" data-desktop-layout="tiles-grid" data-mobile-layout="tiles-grid-mobile">
+        <div class="section-list item-list is-personal" role="list">
+          <div class="item-wrapper">
+            <a title="Visa Infinte Credit Card" data-context="Meganav Links Promotions" href="https://www.sc.com/sg/credit-cards/visa-infinite-card" class="list-item" data-category="promotions" data-page="visa-infinite-card">
+              <div class="cover" style="background-image: url(https://av.sc.com/sg/content/images/promotion-bali-700x300.jpg)"></div>
+              <div class="info">
+                <div class="title">Apply and receive 35,000 miles for a return flight to Bali with Visa Infinite. </div>
+              </div>
+            </a>
+          </div>
+          <div class="item-wrapper">
+            <a title="CashOne" data-context="Meganav Links Promotions" href="https://www.sc.com/sg/borrow/loans/cashone" class="list-item" data-category="promotions" data-page="cashone">
+              <div class="cover" style="background-image: url(https://av.sc.com/sg/content/images/Promo-Navi-Banner-700-x300.jpg)"></div>
+              <div class="info">
+                <div class="title">Get cash the next working day and up to $1,088 cashback with CashOne. </div>
+              </div>
+            </a>
+          </div>
+          <div class="item-wrapper">
+            <a title="Bonus$aver" data-context="Meganav Links Promotions" href="https://www.sc.com/sg/save/current-accounts/bonussaver" class="list-item" data-category="promotions" data-page="bonussaver">
+              <div class="cover" style="background-image: url(https://av.sc.com/sg/content/images/Bonussaver-Meganav-Promotions.jpg)"></div>
+              <div class="info">
+                <div class="title">Earn up to 3.88% p.a. interest on your first S$100,000 deposit balance.</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="section-list item-list is-business" role="list">
+          <div class="item-wrapper">
+            <a title="Business Instalment Loan" data-context="Meganav Links Promotions" href="https://www.sc.com/sg/business-loans-and-working-capital/business-instalment-loan/" class="list-item" data-category="promotions" data-page="business-instalment-loan">
+              <div class="cover" style="background-image: url(https://av.sc.com/sg/content/images/SCB-BIL-700x300.jpg)"></div>
+              <div class="info">
+                <div class="title">Get up to $300K for your business' cash or expansion needs.</div>
+              </div>
+            </a>
+          </div>
+          <div class="item-wrapper">
+            <a title="Smart Business Plan" data-context="Meganav Links Promotions" href="https://www.sc.com/sg/business-cash-management-services/smart-business-plan/" class="list-item" data-category="promotions" data-page="smart-business-plan">
+              <div class="cover" style="background-image: url(https://av.sc.com/sgbeta/content/images/smart-business-plan.png)"></div>
+              <div class="info">
+                <div class="title">Enjoy up to 75% rebate on OTT charges incurred.</div>
+              </div>
+            </a>
+          </div>
+          <!--<div class="item-wrapper">
+            <a title="Marine Cargo Insurance" data-context="Meganav Links Promotions" href="https://www.sc.com/sg/business-insurance/business-protection-insurance/marine-cargo-insurance/" class="list-item" data-category="promotions" data-page="marine-cargo-insurance">
+              <div class="cover" style="background-image: url(https://av.sc.com/sgbeta/content/images/marine-cargo-insurance.png)"></div>
+              <div class="info">
+                <div class="title">Get coverage for your goods in transit with Marine Cargo Insurance.</div>
+              </div>
+            </a>
+          </div>-->
+        </div>
+
+    <div class="section-view-all">
+        <a title="View All Promotions" data-context="Meganav Links Promotions" href="https://www.sc.com/sg/promotions/" class="view-all" data-category="promotions" data-page="promotions">
+          <span class="text">View All Promotions</span>
+          <span class="icon icon-arrow-right" data-grunticon-embed></span>
+        </a>
+      </div>
+      </div>
+
+
+    </div>
+    <div class="left-wrapper">
+      <div class="responsive-list has-buttons" data-desktop-layout="simple-menu" data-mobile-layout="simple-menu-mobile">
+        <div class="section">
+          <div class="section-label">Enjoy our exclusive promotions & offers</div>
+          <ul class="section-list">
+            <li>
+
+
+
+
+
+
+
+  <a title="The Good Life" href="https://www.sc.com/sg/promotions/the-good-life-privileges" class="c-product-section-link list-item is-reset" data-category="promotions" data-page="the-good-life-privileges">
+    <span class="link-text">The Good Life
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+            <li>
+
+
+
+
+
+
+
+  <a title="360° Rewards" href="https://www.sc.com/sg/rewards-programmes/360-rewards" class="c-product-section-link list-item is-reset" data-category="promotions" data-page="360-rewards">
+    <span class="link-text">360° Rewards
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+            <li>
+
+
+
+
+
+
+
+  <a title="Online Rewards" href="https://www.sc.com/nfs/orr/foa/view_reward_home.htm?ctry=SG&lang=en_SG" class="c-product-section-link list-item is-reset" >
+    <span class="link-text">Online Rewards
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div class="meganav-tab is-services" data-send="enter-tab|leave-tab|switch-tab">
+    <button class="c-button tab-button is-reset">
+      <span class="c-icon icon-investments" data-grunticon-embed></span>
+      <span class="text">Services</span>
+      <span class="c-icon icon-varrow" data-grunticon-embed></span>
+    </button>
+    <div class="meganav-contents" data-send="null">
+      <div class="item">
+  <div class="item-content">
+    <div class="right-wrapper">
+      <div class="responsive-blocklist" data-desktop-layout="block-list" data-mobile-layout="simple-menu-mobile">
+        <div class="section">
+          <div class="block-item">
+            <div class="block-wrapper">
+              <div class="block-icon c-icon icon-sc-transfer-money" data-grunticon-embed></div>
+              <div class="section-label">Manage Your Finances</div>
+              <p>Learn more about our card services such as funds transfer, 0% interest instalment plan, etc.</p>
+              <a title="Manage Your Finances card payment plans" data-context="Meganav Services Links" href="https://www.sc.com/sg/bank-with-us/manage-your-finances/" class="block-button c-button is-theme-hollow-gray" data-page="scremit">Card Payment Plans</a>
+            </div>
+
+
+
+
+
+
+
+
+  <a title="Manage Your Finances card payment plans" href="https://www.sc.com/sg/bank-with-us/manage-your-finances/" class="c-product-section-link list-item is-reset only-mobile" data-context="Meganav Services Links">
+    <span class="link-text">Card Payment Plans
+
+  </span>
+
+  </a>
+
+          </div>
+          <div class="block-item">
+            <div class="block-wrapper">
+              <div class="block-icon c-icon icon-sc-account-balance" data-grunticon-embed></div>
+              <div class="section-label">Manage Your Payments</div>
+              <p>Change the way you pay with your credit and debit card in-store, within mobile apps or online</p>
+              <a title="Manage Your Payments ways to pay" data-context="Meganav Services Links" href="https://www.sc.com/sg/bank-with-us/manage-your-payments/" class="block-button c-button is-theme-hollow-gray" data-page="credit-card-payment-methods">Ways To Pay</a>
+            </div>
+
+
+
+
+
+
+
+
+  <a title="Manage Your Payments ways to pay" href="https://www.sc.com/sg/bank-with-us/manage-your-payments/" class="c-product-section-link list-item is-reset only-mobile" data-context="Meganav Services Links">
+    <span class="link-text">Ways To Pay
+
+  </span>
+
+  </a>
+
+          </div>
+          <div class="block-item">
+            <div class="block-wrapper">
+              <div class="block-icon c-icon icon-sc-fees-and-charges" data-grunticon-embed></div>
+              <div class="section-label">SC Remit</div>
+              <p>Transfer funds online to India and enjoy the best INR rate guarantee at zero remittance fees</p>
+              <a title="SC Remit find out more" data-context="Meganav Services Links" href="https://www.sc.com/sg/bank-with-us/scremit/" class="block-button c-button is-theme-hollow-gray" data-page="ways-to-pay">Find Out More</a>
+            </div>
+
+
+
+
+
+
+
+
+  <a title="SC Remit find out more" href="https://www.sc.com/sg/bank-with-us/scremit/" class="c-product-section-link list-item is-reset only-mobile" data-context="Meganav Services Links">
+    <span class="link-text">SC Remit
+
+  </span>
+
+  </a>
+
+          </div>
+        </div>
+    <div class="section-view-all">
+        <a title="View All Services" data-context="Meganav Services Links" href="https://www.sc.com/sg/bank-with-us/" class="view-all" data-category="products" data-page="business-yield-enhancing">
+          <span class="text">View All Services</span>
+          <span class="icon icon-arrow-right" data-grunticon-embed></span>
+        </a>
+        </div>
+      </div>
+    </div>
+    <div class="left-wrapper">
+      <div class="responsive-list has-buttons" data-desktop-layout="simple-menu" data-mobile-layout="simple-menu-mobile">
+        <div class="section">
+          <div class="section-label">Take control of your accounts &amp; finances</div>
+          <ul class="section-list">
+            <li>
+
+
+
+
+
+
+
+  <a title="Online Banking" href="https://www.sc.com/sg/bank-with-us/online-banking/" class="c-product-section-link list-item is-reset" data-context="Meganav links" data-page="online-banking">
+    <span class="link-text">Online Banking
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+      <li>
+
+
+
+
+
+
+
+  <a title="Straight2Bank" href="https://www.sc.com/sg/business-channels-access/straight2bank/" class="c-product-section-link list-item is-reset" data-context="Meganav links" data-page="straight2bank">
+    <span class="link-text">Straight2Bank
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+            <li>
+
+
+
+
+
+
+
+  <a title="Mobile Banking App" href="https://www.sc.com/sg/bank-with-us/mobile-banking-services/standard-chartered-mobile/" class="c-product-section-link list-item is-reset" data-context="Meganav links" data-page="standard-chartered-mobile">
+    <span class="link-text">Mobile Banking App
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+            <li>
+
+
+
+
+
+
+
+  <a title="Online Trading" href="https://www.sc.com/sg/investment/online-trading/" class="c-product-section-link list-item is-reset" data-context="Meganav links" data-page="online-trading">
+    <span class="link-text">Online Trading
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+            <li>
+
+
+
+
+
+
+
+  <a title="Online Unit Trusts" href="https://www.sc.com/sg/investment/online-unit-trusts/" class="c-product-section-link list-item is-reset" data-context="Meganav links" data-page="online-unit-trusts">
+    <span class="link-text">Online Unit Trusts
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div class="meganav-tab is-help" data-send="enter-tab|leave-tab|switch-tab">
+    <button class="c-button tab-button is-reset">
+      <span class="c-icon icon-get-help" data-grunticon-embed></span>
+      <span class="text">Help</span>
+      <span class="c-icon icon-varrow" data-grunticon-embed></span>
+    </button>
+    <div class="meganav-contents" data-send="null">
+      <div class="item">
+  <div class="item-content">
+    <div class="right-wrapper">
+      <div class="responsive-blocklist" data-desktop-layout="block-list" data-mobile-layout="simple-menu-mobile">
+        <div class="section">
+          <div class="block-item">
+            <div class="block-wrapper">
+              <div class="block-icon c-icon icon-sc-people-policeman-or-loss-robbery" data-grunticon-embed></div>
+              <div class="section-label">Lost card?</div>
+              <p>Get urgent help in case your card was lost, stolen or your PIN diclosed</p>
+              <a title="Lost card? report now" data-context="Meganav Get Help Links" href="https://www.sc.com/sg/help/lost-card/" class="block-button c-button is-theme-hollow-gray" data-page="lost-card">Report Now</a>
+            </div>
+
+
+
+
+
+
+
+
+  <a title="Lost card? report now" href="https://www.sc.com/sg/help/lost-card/" class="c-product-section-link list-item is-reset only-mobile" data-context="Meganav Get Help Links">
+    <span class="link-text">Lost card?
+
+  </span>
+
+  </a>
+
+          </div>
+          <div class="block-item">
+            <div class="block-wrapper">
+              <div class="block-icon c-icon icon-sc-card-cashback" data-grunticon-embed></div>
+              <div class="section-label">Activate card</div>
+              <p>Activate your Standard Chartered credit/debit card for local or overseas usage in 3 simple steps</p>
+              <a title="Activate card now" data-context="Meganav Get Help Links" href="https://www.sc.com/sg/help/activate-card/" class="block-button c-button is-theme-hollow-gray" data-page="activate-card">Activate Now</a>
+            </div>
+
+
+
+
+
+
+
+
+  <a title="Activate card now" href="https://www.sc.com/sg/help/activate-card/" class="c-product-section-link list-item is-reset only-mobile" data-context="Meganav Get Help Links">
+    <span class="link-text">Activate card
+
+  </span>
+
+  </a>
+
+          </div>
+          <div class="block-item">
+            <div class="block-wrapper">
+              <div class="block-icon c-icon icon-sc-people-call-assistance" data-grunticon-embed></div>
+              <div class="section-label">Call us</div>
+              <p>Call our phone banking team hotline for immediate assistance</p>
+              <a title="Call us now" data-context="Meganav Get Help Links" href="https://www.sc.com/sg/help/contact-us/" class="block-button c-button is-theme-hollow-gray" data-page="contact-us">Call Now</a>
+            </div>
+
+
+
+
+
+
+
+
+  <a title="Call us now" href="https://www.sc.com/sg/help/contact-us/" class="c-product-section-link list-item is-reset only-mobile" data-context="Meganav Get Help Links">
+    <span class="link-text">Call us
+
+  </span>
+
+  </a>
+
+          </div>
+        </div>
+    <div class="section-view-all">
+        <a title="View All Help" data-context="Meganav Get Help Links" href="https://www.sc.com/sg/help/" class="view-all" data-category="products" data-page="business-yield-enhancing">
+          <span class="text">View All Help</span>
+          <span class="icon icon-arrow-right" data-grunticon-embed></span>
+        </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="left-wrapper">
+      <div class="responsive-list has-buttons" data-desktop-layout="simple-menu" data-mobile-layout="simple-menu-mobile">
+        <div class="section">
+          <div class="section-label">Problems?<br> Visit our help centre</div>
+          <ul class="section-list">
+            <li>
+
+
+
+
+
+
+
+  <a title="Locate Us" href="https://www.sc.com/sg/atm-branch-locator/" class="c-product-section-link list-item is-reset" data-page="atm-branch-locator" data-context="Meganav Get Help Links">
+    <span class="link-text">Locate Us
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+            <li>
+
+
+
+
+
+
+
+  <a title="Contact Us" href="https://www.sc.com/sg/help/contact-us/" class="c-product-section-link list-item is-reset" data-page="contact-us" data-context="Meganav Get Help Links">
+    <span class="link-text">Contact Us
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+      <li>
+
+
+
+
+
+
+
+  <a title="FAQs" href="https://www.sc.com/sg/help/#faq" class="c-product-section-link list-item is-reset" data-page="faq" data-context="Meganav Get Help Links">
+    <span class="link-text">FAQs
+
+  </span>
+
+      <span class="icon icon-arrow-3" data-grunticon-embed></span>
+
+  </a>
+</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div class="meganav-tab is-search">
+    <a class="c-button tab-button is-reset" title="Search" data-context="Meganav Search Links">
+			<div class="searchbox" :class="{'searchbox-open': showSearchBar}">
+	      <span class="c-icon icon-sc-search-header" data-grunticon-embed  @click="showSearchBar = !showSearchBar"></span>
+	      <span class="text">Search</span>
+				<input type="text" size="30" name="search-terms" id="search-terms" placeholder="Quick access" v-model="searchTerm">
+			</div>
+	  </a>
+  </div>
+  <div class="meganav-login" data-send="open-login-menu|close-login-menu|toggle-login-menu">
+
+
+
+
+
+  <button class="c-button login-button is-v-small is-theme-solid-green" >
+
+    <span class="icon icon-sc-s-security-lock01" data-grunticon-embed></span>
+
+    Login
+  </button>
+
+
+    <span class="section-label">Welcome to Standard Chartered</span>
+   <div class="meganav-login-box">
+      <div class="container" data-send="null">
+        <div class="button-block">
+
+
+
+
+
+
+
+
+  <a title="Online Banking Login" href="https://ibank.standardchartered.com.sg/nfs/login.htm" class="c-product-section-link " data-send='null' data-context="Meganav Links Online Banking Login">
+    <span class="link-text">Online Banking Login
+
+  </span>
+
+      <span class="icon icon-sc-s-security-lock01" data-grunticon-embed></span>
+
+  </a>
+
+        </div>
+      </div>
+
+      <div class="shortcuts">
+        <ul>
+
+      <li>
+
+
+
+
+
+
+
+  <a title="Online Rewards" href="https://www.sc.com/nfs/orr/foa/view_reward_home.htm?ctry=SG&lang=en_SG" class="c-product-section-link list-item is-reset is-main" data-send='null' data-context="Meganav Links Online Rewards">
+    <span class="link-text">Online Rewards
+
+  </span>
+
+      <span class="icon icon-sc-s-360-rewards" data-grunticon-embed></span>
+
+  </a>
+</li>
+      <li>
+
+
+
+
+
+
+
+  <a title="Straight2Bank Login" href="https://s2b.standardchartered.com/ssoapp/login.jsp" class="c-product-section-link list-item is-reset" data-send='null' data-context="Meganav Links Straight2Bank Login">
+    <span class="link-text">Straight2Bank Login
+
+  </span>
+
+      <span class="icon icon-mini-chart" data-grunticon-embed></span>
+
+  </a>
+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="meganav-logo">
+  <a href="https://www.sc.com/sg/" class="logo" title="Home" data-context="Meganav Links Home"></a>
+</div>
+
+</nav>
+
+  </div>
+</header>
+
+<div class="m-text-content" data-modal-id="external-links-disclaimer">
+  <div class="m-disclaimer">
+    <div class="content-wrapper">
+      <div class="header">
+
+    <h2 class="title">Disclaimer</h2>
+
+</div>
+
+
+      <input type="checkbox" checked="checked" class="read-more-state" id="disclaimer-external-links" />
+      <div class="content">
+        <div class="content-mask">
+        <p>
+          This link brings you to a third party Website, over which Standard Chartered Bank (Singapore) Limited has no control ("3rd Party Website"). Use of the 3rd Party Website will be entirely at your own risk, and subject to the terms of the 3rd Party Website, including those relating to confidentiality, data privacy and security.
+          </p>
+          <p>
+          Standard Chartered Bank (Singapore) Limited makes no warranties, representations or undertakings about and does not endorse, recommend or approve the contents of the 3rd Party Website.
+          </p>
+          <p>
+            In addition to the terms stated in Standard Chartered Bank (Singapore) Limited's <a href="https://www.sc.com/sg/terms-and-conditions/legal-information/" title="Important Legal Notices" data-context="Modal Disclaimer External Links">Important Legal Notices</a>, Standard Chartered Bank (Singapore) Limited shall have no responsibility or liability in connection with the content of or the consequences of accessing the 3rd Party Website, including any virus arising from or system failure associated with the 3rd Party Website.
+          </p>
+        <p>
+          In the event of any inconsistency between the terms herein / the Bank's <a href="https://www.sc.com/sg/terms-and-conditions/legal-information/" title="Important Legal Notices" data-context="Modal Disclaimer External Links">Important Legal Notices</a> and the terms on the 3rd Party Website, the terms herein / the Bank's <a href="https://www.sc.com/sg/terms-and-conditions/legal-information/" title="Important Legal Notices" data-context="Modal Disclaimer External Links">Important Legal Notices</a> will prevail.
+        </p>
+        <p>
+           By clicking "Proceed", you will be confirming that you have read and agreed to the terms herein and in the Bank's <a href="https://www.sc.com/sg/terms-and-conditions/legal-information/" title="Important Legal Notices" data-context="Modal Disclaimer External Links">Important Legal Notices</a>.
+         </p>
+
+        <a class="c-button-small is-theme-solid-green-hollow-white is-external-link-button" target="_blank" data-send="close-modal" title="Proceed" data-context="Modal Disclaimer External Links Proceed Button">Proceed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="m-search-result" v-if="filteredItems">
+	<div class="content-wrapper">
+		<div class="content">
+			<ul class="filter-type">
+				<li class="type-item" :class="{'active': isAllLabelActive}" @click="activeLabel = 0">
+					ALL
+					<span class="counter">{{computedLabelAll || 0}}</span>
+				</li>
+				<li class="type-item" :class="{'active': isCreditCardsLabelActive}" @click="activeLabel = 1">
+					CREDIT CARDS
+					<span class="counter">{{computedLabelCreditCards || 0}}</span>
+				</li>
+				<li class="type-item">
+					SAVE
+					<span class="counter">{{computedLabelSave || 0}}</span>
+				</li>
+				<li class="type-item" :class="{'active': isBorrowLabelActive}" @click="activeLabel = 3">
+					BORROW
+					<span class="counter">{{computedLabelBorrow || 0}}</span>
+				</li>
+				<li class="type-item">
+					INVEST
+					<span class="counter">{{computedLabelInvest || 0}}</span>
+				</li>
+				<li class="type-item">
+					INSURE
+					<span class="counter">{{computedLabelInsure || 0}}</span>
+				</li>
+				<li class="type-item" :class="{'active': isSupportLabelActive}">
+					SUPPORT
+					<span class="counter">{{computedLabelSupport || 0}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="content-wrapper">
+		<div class="content">
+			<div class="container">
+				<ul class="list">
+					<li class="item result-item" v-for="(item, index) in filteredItems" v-bind:id="'result-item-' + index">
+						<div class="content">
+							<div class="thumbnail">
+								<img :src="item.thumbnail">
+							</div>
+							<div class="details">
+								<a :href="item.titleLink" :title="item.title">
+									<h3 class="title">{{item.title}}</h3>
+								</a>
+								<div class="crumb" v-if="item.crumb">{{item.crumb}}</div>
+								<p class="summary">{{item.summary}}</p>
+								<a :href="item.titleLink" class="c-button is-v-small is-theme-solid-green" title="Apply Now" v-if="item.applyNow">Apply Now</a>
+								<a :href="item.titleLink" class="c-button is-v-small is-theme-solid-green" title="Get In Touch" v-if="item.getInTouch">Get In Touch</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div
+class="m-hero has-tiles is-left-align "
+id="sc-lb-module-promotional-masthead">
+
+				<div class="only-desktop">
+			<div class="background" style="background-image: url(https://av.sc.com/sg/content/images/Personalmasthead.jpg)"></div>
+		</div>
+		<div class="only-mobile">
+			<div class="background" style="background-image: url(https://av.sc.com/sg/content/images/Personalmasthead-768x350.jpg)"></div>
+		</div>
+
+
+	<div class="content">
+		<div class="outer-wrapper">
+
+							<div class="hero-header">
+					<div class="wrapper">
+													<h1 class="title">
+								Empowering you with financial solutions to achieve your aspirations							</h1>
+
+													<p class="message">
+								Welcome to Standard Chartered Personal Banking							</p>
+
+																															</div>
+				</div>
+
+										<!-- Tiles -->
+				<div class="tiles-container">
+					<div class="content-wrapper">
+						<div class="list"
+						role="list"
+						data-flickity='{
+							"accessibility": false,
+							"cellAlign": "left",
+							"contain": true,
+							"prevNextButtons": false,
+							"pageDots": false,
+							"wrapAround": false,
+							"draggable": true,
+							"watchCSS": true}'>
+															<!-- Tile item -->
+								<div class="item-wrapper" role="listitem">
+									<a title="Unlimited Cashback Credit Card"
+									data-context="Promotional Masthead Tiles"
+									href="https://www.sc.com/sg/credit-cards/unlimited-cashback-credit-card/"
+									class="item">
+																					<div class="cover" style="background-image: url(https://av.sc.com/sg/content/images/800x800-600x600.jpg)"></div>
+
+										<div class="info">
+											<h2 class="title">Unlimited Cashback Credit Card</h2>
+											<p class="description">No cashback cap and no minimum spend. Enjoy 1.5% cashback on all eligible spend</p>
+											<div class="read-more">
+												More												<span class="c-icon icon-arrow-2" data-grunticon-embed></span>
+											</div>
+										</div>
+									</a>
+								</div>
+								<!-- End tile item -->
+															<!-- Tile item -->
+								<div class="item-wrapper" role="listitem">
+									<a title="Bonus$aver"
+									data-context="Promotional Masthead Tiles"
+									href="https://www.sc.com/sg/save/current-accounts/bonussaver/"
+									class="item">
+																					<div class="cover" style="background-image: url(https://av.sc.com/sg/content/images/Bonussaver_RelatedLinksProductPintiles.jpg)"></div>
+
+										<div class="info">
+											<h2 class="title">Bonus$aver</h2>
+											<p class="description">Enjoy up to 3.88% p.a. interest on on your first S$100,000 deposit</p>
+											<div class="read-more">
+												More												<span class="c-icon icon-arrow-2" data-grunticon-embed></span>
+											</div>
+										</div>
+									</a>
+								</div>
+								<!-- End tile item -->
+															<!-- Tile item -->
+								<div class="item-wrapper" role="listitem">
+									<a title="2017 GSS Spend &amp; Redeem Promotion"
+									data-context="Promotional Masthead Tiles"
+									href="https://www.sc.com/sg/promotions/gss"
+									class="item">
+																					<div class="cover" style="background-image: url(https://av.sc.com/sg/content/images/gss-2017-600x600.jpg)"></div>
+
+										<div class="info">
+											<h2 class="title">2017 GSS Spend &amp; Redeem Promotion</h2>
+											<p class="description">Surround yourself with rewards every time you shop. Receive a gift with eligible spend.</p>
+											<div class="read-more">
+												More												<span class="c-icon icon-arrow-2" data-grunticon-embed></span>
+											</div>
+										</div>
+									</a>
+								</div>
+								<!-- End tile item -->
+													</div>
+					</div>
+				</div>
+				<!-- End tiles -->
+					</div>
+	</div>
+</div><!-- /Hero -->
+<!-- Tabbed Features -->
+<div class="m-tabbed-features" id="sc-lb-module-need-module">
+	<!-- tab controls -->
+	<div class="content-wrapper">
+		<div class="header">
+							<p class="title">
+					Simple and smarter banking to help you save, spend and get rewarded				</p>
+
+							<h2 class="message">
+					As a Standard Chartered client, you will enjoy a banking experience that is simple and rewarding, helping you to save and spend smarter.				</h2>
+					</div>
+		<ul class="grid">
+							<li class="item" data-change-el="#simple-easy-banking">
+					<div class="item-inner">
+						<div class="question">
+							<div class="icon icon-sc-city hover-icon" data-grunticon-embed></div>
+							<div class="content">
+								<h3 class="title">
+									<a title="Simple, easy banking"
+									href="#null"
+									data-context="Needs Title Link">
+										Simple, easy banking									</a>
+								</h3>
+							</div>
+						</div>
+						<div class="down-arrow icon-arrow-small" data-grunticon-embed></div>
+					</div>
+				</li>
+							<li class="item" data-change-el="#simple-financing-solutions">
+					<div class="item-inner">
+						<div class="question">
+							<div class="icon icon-sc-graphs hover-icon" data-grunticon-embed></div>
+							<div class="content">
+								<h3 class="title">
+									<a title="Simple financing solutions"
+									href="#null"
+									data-context="Needs Title Link">
+										Simple financing solutions									</a>
+								</h3>
+							</div>
+						</div>
+						<div class="down-arrow icon-arrow-small" data-grunticon-embed></div>
+					</div>
+				</li>
+							<li class="item" data-change-el="#protect-me-my-family">
+					<div class="item-inner">
+						<div class="question">
+							<div class="icon icon-sc-padlock hover-icon" data-grunticon-embed></div>
+							<div class="content">
+								<h3 class="title">
+									<a title="Protect me &amp; my family"
+									href="#null"
+									data-context="Needs Title Link">
+										Protect me &amp; my family									</a>
+								</h3>
+							</div>
+						</div>
+						<div class="down-arrow icon-arrow-small" data-grunticon-embed></div>
+					</div>
+				</li>
+							<li class="item" data-change-el="#grow-my-wealth">
+					<div class="item-inner">
+						<div class="question">
+							<div class="icon icon-sc-nurturing hover-icon" data-grunticon-embed></div>
+							<div class="content">
+								<h3 class="title">
+									<a title="Grow my wealth"
+									href="#null"
+									data-context="Needs Title Link">
+										Grow my wealth									</a>
+								</h3>
+							</div>
+						</div>
+						<div class="down-arrow icon-arrow-small" data-grunticon-embed></div>
+					</div>
+				</li>
+							<li class="item" data-change-el="#rewards-and-promotions">
+					<div class="item-inner">
+						<div class="question">
+							<div class="icon icon-sc-special-care hover-icon" data-grunticon-embed></div>
+							<div class="content">
+								<h3 class="title">
+									<a title="Rewards and promotions"
+									href="#null"
+									data-context="Needs Title Link">
+										Rewards and promotions									</a>
+								</h3>
+							</div>
+						</div>
+						<div class="down-arrow icon-arrow-small" data-grunticon-embed></div>
+					</div>
+				</li>
+					</ul>
+	</div>
+	<!-- end tab controls -->
+
+	<!-- tab content wrapper -->
+	<div class="selected-tab-content slider-container"
+	role="list">
+
+			<!-- Tab content -->
+			<div class="content-container tab-content" id="simple-easy-banking" role="listitem">
+				<div class="m-tabbed-features-content is-theme-image">
+											<div class="only-desktop">
+							<div class="background"
+								style="background-image: url(https://av.sc.com/sg/content/images/Personal-CVP-benefit-home-2-pl-h-1_1600.jpg)">
+								<div class="background-opacity" style="opacity: .5"></div>
+							</div>
+						</div>
+						<div class="only-mobile">
+							<div class="background"
+								style="background-image: url(https://av.sc.com/sg/content/images/Personal-CVP-benefit-home-2-pl-h-1_1600-150x150.jpg)">
+								<div class="background-opacity" style="opacity: .5"></div>
+							</div>
+						</div>
+
+											<div class="header">
+															<h3 class="title">Simple, easy banking</h3>
+																						<p class="message">Now it&#039;s easier to focus on what really matters to you. Through our award-winning online and mobile banking platforms, transactions are quick and simple. Less time spent on banking means more time for everything else. </p>
+													</div>
+																<div class="content">
+															<ul class="column-full-width is-unfolded">
+																			<li class="item" >
+	<h4 class="title">
+							<div class="m-text-content" data-modal-id="solution-group-4391">
+				<div class="text"><p>Sometimes, life can be complicated. We recognise this and have made at least one aspect of it simpler banking with us.</p>
+</div>
+			</div>
+			<a title="Simple and Easy Everyday Banking"
+			class="link"
+			data-send="show-overlay"
+			data-modal-source="solution-group-4391"
+			data-context="Solution Group Title Lightbox">
+				<span class="text">Simple and Easy Everyday Banking</span>
+				<span class="icon icon-i" data-grunticon-embed></span>
+			</a>
+			</h4>
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Deposit Accounts"
+						class="link"
+						href="https://www.sc.com/sg/save/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Deposit Accounts</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																		<p>Current and savings accounts to help you save and spend.</p>
+							</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Banking Solutions"
+						class="link"
+						href="https://www.sc.com/sg/banking-solutions/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Banking Solutions</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																		<p>Award-winning digital banking for 24x7 convenience.</p>
+							</li>
+		</ul>
+
+	</li>
+																	</ul>
+																				</div>
+									</div> <!-- end tab content -->
+			</div>
+
+			<!-- Tab content -->
+			<div class="content-container tab-content" id="simple-financing-solutions" role="listitem">
+				<div class="m-tabbed-features-content is-theme-image">
+											<div class="only-desktop">
+							<div class="background"
+								style="background-image: url(https://av.sc.com/sg/content/images/Personal-CVP-142742200_super_1600.jpg)">
+								<div class="background-opacity" style="opacity: .5"></div>
+							</div>
+						</div>
+						<div class="only-mobile">
+							<div class="background"
+								style="background-image: url(https://av.sc.com/sg/content/images/Personal-CVP-142742200_super_1600-150x150.jpg)">
+								<div class="background-opacity" style="opacity: .5"></div>
+							</div>
+						</div>
+
+											<div class="header">
+															<h3 class="title">Simple financing solutions</h3>
+																						<p class="message">Fast forward your plans with simple financing solutions. At Standard Chartered, our goal is to provide you access to the funds you need, when you need them.</p>
+													</div>
+																<div class="content">
+															<ul class="column-full-width is-unfolded">
+																			<li class="item" >
+	<h4 class="title">
+							<div class="m-text-content" data-modal-id="solution-group-4392">
+				<div class="text"><p>We offer simpler ways to spend now and pay later. For your every day needs, enjoy attractive benefits offered by our credit cards, which include rewards for every dollar spent. For those bigger purchases, enjoy our flexible and competitive loans and mortgages.</p>
+</div>
+			</div>
+			<a title="Borrowing Solutions"
+			class="link"
+			data-send="show-overlay"
+			data-modal-source="solution-group-4392"
+			data-context="Solution Group Title Lightbox">
+				<span class="text">Borrowing Solutions</span>
+				<span class="icon icon-i" data-grunticon-embed></span>
+			</a>
+			</h4>
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Credit Cards"
+						class="link"
+						href="https://www.sc.com/sg/credit-cards/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Credit Cards</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																		<p>Range of credit cards offering attractive benefits and exclusive rewards.</p>
+							</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Loans"
+						class="link"
+						href="https://www.sc.com/sg/borrow/loans/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Loans</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																		<p>Flexible payments, competitive rates and exclusive offers.</p>
+							</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Mortgages"
+						class="link"
+						href="https://www.sc.com/sg/borrow/mortgages/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Mortgages</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																		<p>Finding the right home can be difficult but we make financing it easier, with our simple mortgages, competitive rates and skilled specialists.</p>
+							</li>
+		</ul>
+
+	</li>
+																	</ul>
+																				</div>
+									</div> <!-- end tab content -->
+			</div>
+
+			<!-- Tab content -->
+			<div class="content-container tab-content" id="protect-me-my-family" role="listitem">
+				<div class="m-tabbed-features-content is-theme-image">
+											<div class="only-desktop">
+							<div class="background"
+								style="background-image: url(https://av.sc.com/sg/content/images/Personal-CVP-138401324_s_1600.jpg)">
+								<div class="background-opacity" style="opacity: .5"></div>
+							</div>
+						</div>
+						<div class="only-mobile">
+							<div class="background"
+								style="background-image: url(https://av.sc.com/sg/content/images/Personal-CVP-138401324_s_1600-150x150.jpg)">
+								<div class="background-opacity" style="opacity: .5"></div>
+							</div>
+						</div>
+
+											<div class="header">
+															<h3 class="title">Protect me &amp; my family</h3>
+																						<p class="message">Protect what matters most.  No one can predict the future, but we can help you prepare for it. </p>
+													</div>
+																<div class="content">
+															<ul class="column-full-width is-unfolded">
+																			<li class="item" >
+	<h4 class="title">
+							<div class="m-text-content" data-modal-id="solution-group-4393">
+				<div class="text"><p>Protect your family and your assets with our comprehensive suite of insurance solutions.</p>
+</div>
+			</div>
+			<a title="Protection"
+			class="link"
+			data-send="show-overlay"
+			data-modal-source="solution-group-4393"
+			data-context="Solution Group Title Lightbox">
+				<span class="text">Protection</span>
+				<span class="icon icon-i" data-grunticon-embed></span>
+			</a>
+			</h4>
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Travel"
+						class="link"
+						href="https://www.sc.com/sg/insurance/travel/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Travel</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Personal Accident"
+						class="link"
+						href="https://www.sc.com/sg/insurance/personal-accident/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Personal Accident</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Endowment &amp; Life Insurance"
+						class="link"
+						href="https://www.sc.com/sg/insurance/endowment-plan-life-insurance/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Endowment &amp; Life Insurance</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Home Content"
+						class="link"
+						href="https://www.sc.com/sg/insurance/others/home-protector/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Home Content</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Mortgage"
+						class="link"
+						href="https://www.sc.com/sg/insurance/mortgage-protection/prumortgage/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Mortgage</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Motor"
+						class="link"
+						href="https://www.sc.com/sg/insurance/motor/ultimate-car-protector/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Motor</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Credit Card"
+						class="link"
+						href="https://www.sc.com/sg/insurance/others/creditsafe/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Credit Card</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Domestic Helper"
+						class="link"
+						href="https://www.sc.com/sg/insurance/others/maid-plus/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Domestic Helper</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+	</li>
+																	</ul>
+																				</div>
+									</div> <!-- end tab content -->
+			</div>
+
+			<!-- Tab content -->
+			<div class="content-container tab-content" id="grow-my-wealth" role="listitem">
+				<div class="m-tabbed-features-content is-theme-image">
+											<div class="only-desktop">
+							<div class="background"
+								style="background-image: url(https://av.sc.com/sg/content/images/Personal-CVP-benefits-offers-gifts-presents-car-toy-box-shopping-delivery_1600.jpg)">
+								<div class="background-opacity" style="opacity: .5"></div>
+							</div>
+						</div>
+						<div class="only-mobile">
+							<div class="background"
+								style="background-image: url(https://av.sc.com/sg/content/images/Personal-CVP-benefits-offers-gifts-presents-car-toy-box-shopping-delivery_1600-150x150.jpg)">
+								<div class="background-opacity" style="opacity: .5"></div>
+							</div>
+						</div>
+
+											<div class="header">
+															<h3 class="title">Grow my wealth</h3>
+																						<p class="message">Helping you achieve your financial goals. Growing your wealth entails thoughtful planning. Our investment solutions and market insights will help make investing simpler and easier. </p>
+													</div>
+																<div class="content">
+															<ul class="column-full-width is-unfolded">
+																			<li class="item" >
+	<h4 class="title">
+							<div class="m-text-content" data-modal-id="solution-group-4395">
+				<div class="text"><p>Begin your wealth journey with us. We offer simple investment solutions that make starting out easier and affordable.</p>
+</div>
+			</div>
+			<a title="Ways to invest"
+			class="link"
+			data-send="show-overlay"
+			data-modal-source="solution-group-4395"
+			data-context="Solution Group Title Lightbox">
+				<span class="text">Ways to invest</span>
+				<span class="icon icon-i" data-grunticon-embed></span>
+			</a>
+			</h4>
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Structured Deposit"
+						class="link"
+						href="https://www.sc.com/sg/investment/structured-deposits/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Structured Deposit</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Premium Currency Investment"
+						class="link"
+						href="https://www.sc.com/sg/investment/premium-currency-investment/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Premium Currency Investment</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Endowment Plan"
+						class="link"
+						href="https://www.sc.com/sg/insurance/insurance-savings-plan/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Endowment Plan</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Unit Trusts"
+						class="link"
+						href="https://www.sc.com/sg/investment/unit-trusts/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Unit Trusts</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Online Unit Trusts"
+						class="link"
+						href="https://www.sc.com/sg/investment/online-unit-trusts/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Online Unit Trusts</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Online Trading"
+						class="link"
+						href="https://www.sc.com/sg/investment/online-trading/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Online Trading</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																</li>
+		</ul>
+
+	</li>
+																	</ul>
+																				</div>
+									</div> <!-- end tab content -->
+			</div>
+
+			<!-- Tab content -->
+			<div class="content-container tab-content" id="rewards-and-promotions" role="listitem">
+				<div class="m-tabbed-features-content is-theme-image">
+											<div class="only-desktop">
+							<div class="background"
+								style="background-image: url(https://av.sc.com/sg/content/images/Personal-CVP_024722228_web_1600.jpg)">
+								<div class="background-opacity" style="opacity: .5"></div>
+							</div>
+						</div>
+						<div class="only-mobile">
+							<div class="background"
+								style="background-image: url(https://av.sc.com/sg/content/images/Personal-CVP_024722228_web_1600-150x150.jpg)">
+								<div class="background-opacity" style="opacity: .5"></div>
+							</div>
+						</div>
+
+											<div class="header">
+															<h3 class="title">Rewards and promotions</h3>
+																						<p class="message">We value your relationship and aim to do our best to recognise it. With The Good Life, enjoy exciting lifestyle offers and promotions, at home and overseas. With our 360° Rewards Programme, be rewarded not only for your credit card spend, but also for other products you hold with us, like your home loan. The more you bank with us, the greater the rewards.</p>
+													</div>
+																<div class="content">
+															<ul class="column-full-width is-unfolded">
+																			<li class="item" >
+	<h4 class="title">
+										<a title="Rewards and promotions"
+			class="link"
+			href="https://www.sc.com/sg/rewards-programmes/"
+			data-context="Solution Group Title Link">
+				<span class="text">Rewards and promotions</span>
+									<span class="icon icon-arrow" data-grunticon-embed></span>
+							</a>
+						</h4>
+			<ul class="item-content">
+			<li class="list">
+																				<a title="360° Rewards Programme"
+						class="link"
+						href="https://www.sc.com/sg/rewards-programmes/360-rewards/"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">360° Rewards Programme</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																		<p>Get rewards on your credit cards spend, mortgage, investments and other products.</p>
+							</li>
+		</ul>
+
+			<ul class="item-content">
+			<li class="list">
+																				<a title="Online 360° Rewards Point Redemption"
+						class="link"
+						href="https://www.sc.com/sg/rewards"
+						data-context="Solution Group Title Lightbox">
+							<span class="text">Online 360° Rewards Point Redemption</span>
+							<div class="icon icon-arrow-small" data-grunticon-embed></div>
+						</a>
+																		<p>Treat yourself to some gifts by redeeming your points.</p>
+							</li>
+		</ul>
+
+	</li>
+																	</ul>
+																				</div>
+									</div> <!-- end tab content -->
+			</div>
+			</div>
+	<!-- end tab content wrapper -->
+</div>
+<div class="m-mini-card-grid"id="sc-lb-module-our-product-suite">
+	<div class="content-wrapper">
+					<div class="header">
+				<h1 class="title">Our Products</h1>
+			</div>
+							<div class="grid-container">
+				<ul class="grid-two-columns">
+											<li class="item-wrapper">
+							<a href="https://www.sc.com/sg/credit-cards/" class="item">
+								<div class="item-inner">
+									<div class="info">
+										<p class="title">Credit Cards</p>
+									</div>
+									<div class="icon hover-icon icon-sc-s-mastercard" data-grunticon-embed></div>
+								</div>
+							</a>
+						</li>
+											<li class="item-wrapper">
+							<a href="https://www.sc.com/sg/investment/" class="item">
+								<div class="item-inner">
+									<div class="info">
+										<p class="title">Investments</p>
+									</div>
+									<div class="icon hover-icon icon-sc-s-investments-up" data-grunticon-embed></div>
+								</div>
+							</a>
+						</li>
+											<li class="item-wrapper">
+							<a href="https://www.sc.com/sg/save/" class="item">
+								<div class="item-inner">
+									<div class="info">
+										<p class="title">Accounts &amp; Deposits</p>
+									</div>
+									<div class="icon hover-icon icon-sc-s-savings" data-grunticon-embed></div>
+								</div>
+							</a>
+						</li>
+											<li class="item-wrapper">
+							<a href="https://www.sc.com/sg/borrow/loans/" class="item">
+								<div class="item-inner">
+									<div class="info">
+										<p class="title">Loans</p>
+									</div>
+									<div class="icon hover-icon icon-sc-s-home02" data-grunticon-embed></div>
+								</div>
+							</a>
+						</li>
+											<li class="item-wrapper">
+							<a href="https://www.sc.com/sg/insurance/" class="item">
+								<div class="item-inner">
+									<div class="info">
+										<p class="title">Insurance</p>
+									</div>
+									<div class="icon hover-icon icon-sc-s-umbrella" data-grunticon-embed></div>
+								</div>
+							</a>
+						</li>
+											<li class="item-wrapper">
+							<a href="https://www.sc.com/sg/borrow/mortgages/" class="item">
+								<div class="item-inner">
+									<div class="info">
+										<p class="title">Mortgages</p>
+									</div>
+									<div class="icon hover-icon icon-sc-s-bank" data-grunticon-embed></div>
+								</div>
+							</a>
+						</li>
+									</ul>
+			</div>
+			</div>
+</div>
+<!-- sc-banner partial -->
+<div class="m-banner is-full-width is-bg-scale is-left-align is-theme-standard" id="sc-lb-module-sc-banner">
+			<div class="only-desktop">
+			<div class="background" style="background-image: url(https://av.sc.com/sg/content/images/MCE-banner-1600x490.jpg)"></div>
+		</div>
+		<div class="only-mobile">
+			<div class="background" style="background-image: url(https://av.sc.com/sg/content/images/MCE-banner-1600x490-768x350.jpg)"></div>
+		</div>
+
+	<div class="content-wrapper">
+		<div class="content">
+							<p class="message">Market Views On-The-Go</p>
+
+
+							<h2 class="title">
+											<a title="Want to know which asset classes we expect to perform well?" data-context="Banner title link" href="https://www.sc.com/retail/mce/index.html#/landing?lang=en&#038;ctry=SG&#038;channel=PLRB&#038;sapp=PUB">							Want to know which asset classes we expect to perform well?						</a>
+									</h2>
+
+
+							<ul class="buttons">
+											<li >
+			<a title="Find Out More"
+		href="https://www.sc.com/retail/mce/index.html#/landing?lang=en&#038;ctry=SG&#038;channel=PLRB&#038;sapp=PUB"
+		data-context="Banner CTA"
+		class="c-button is-theme-hollow-white"
+		 target="_blank"		>
+			Find Out More		</a>
+	</li>
+									</ul>
+					</div>
+	</div>
+</div>
+<!-- Important Information List partial -->
+<div class="m-important-news" id="sc-lb-module-important-info-list">
+	<div class="content-wrapper">
+					<div class="header">
+				<h2 class="title">Important Information</h2>
+
+									<div class="button">
+						<a href="https://www.sc.com/sg/important-information/" class="c-button-icon">
+							<span class="icon icon-arrow " data-grunticon-embed>
+								<span>More</span>
+							</span>
+						</a>
+					</div>
+							</div>
+
+
+			<div class="list" role="list">
+
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled Maintenance of ATM and CDM on 22 July 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-automated-teller-machines-atm-cash-deposit-machines-cdm-on-22-july-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled Maintenance of ATM and CDM on 22 July 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-automated-teller-machines-atm-cash-deposit-machines-cdm-on-22-july-2017/">										Scheduled Maintenance of ATM and CDM on 22 July 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 22 Jul 2017									</p>
+																<div class="button">
+									<a title="Scheduled Maintenance of ATM and CDM on 22 July 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-automated-teller-machines-atm-cash-deposit-machines-cdm-on-22-july-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled System Maintenance of Online Banking and SC Mobile16 July 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-16-july-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled System Maintenance of Online Banking and SC Mobile16 July 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-16-july-2017/">										Scheduled System Maintenance of Online Banking and SC Mobile16 July 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 16 Jul 2017									</p>
+																<div class="button">
+									<a title="Scheduled System Maintenance of Online Banking and SC Mobile16 July 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-16-july-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Exit of ANZ from atm5 network" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/exit-of-anz-from-atm5-network/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Exit of ANZ from atm5 network" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/exit-of-anz-from-atm5-network/">										Exit of ANZ from atm5 network									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 04 Aug 2017									</p>
+																<div class="button">
+									<a title="Exit of ANZ from atm5 network" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/exit-of-anz-from-atm5-network/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Electrical Maintenance Works At Clementi Mall Branch" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/electrical-maintenance-works-at-clementi-mall-branch-from-26-jul-17-8pm-to-27-jul-17-11am/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Electrical Maintenance Works At Clementi Mall Branch" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/electrical-maintenance-works-at-clementi-mall-branch-from-26-jul-17-8pm-to-27-jul-17-11am/">										Electrical Maintenance Works At Clementi Mall Branch									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 26 Jul 2017									</p>
+																<div class="button">
+									<a title="Electrical Maintenance Works At Clementi Mall Branch" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/electrical-maintenance-works-at-clementi-mall-branch-from-26-jul-17-8pm-to-27-jul-17-11am/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="An upgraded Online Trading platform – Effective 17 July 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/an-upgraded-online-trading-platform-effective-17-july-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="An upgraded Online Trading platform – Effective 17 July 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/an-upgraded-online-trading-platform-effective-17-july-2017/">										An upgraded Online Trading platform – Effective 17 July 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 17 Jul 2017									</p>
+																<div class="button">
+									<a title="An upgraded Online Trading platform – Effective 17 July 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/an-upgraded-online-trading-platform-effective-17-july-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled System Maintenance of Online, Mobile and SMS Banking 8,9,10 July 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-mobile-and-sms-banking-on-8-9-10-july-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled System Maintenance of Online, Mobile and SMS Banking 8,9,10 July 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-mobile-and-sms-banking-on-8-9-10-july-2017/">										Scheduled System Maintenance of Online, Mobile and SMS Banking 8,9,10 July 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 08 Jul 2017									</p>
+																<div class="button">
+									<a title="Scheduled System Maintenance of Online, Mobile and SMS Banking 8,9,10 July 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-mobile-and-sms-banking-on-8-9-10-july-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Electrical Maintenance Works At ION Orchard Branch from 03-Jul-2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/electrical-maintenance-works-at-ion-orchard-branch-from-03-jul-2017-8pm-to-04-jul-2017-11am/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Electrical Maintenance Works At ION Orchard Branch from 03-Jul-2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/electrical-maintenance-works-at-ion-orchard-branch-from-03-jul-2017-8pm-to-04-jul-2017-11am/">										Electrical Maintenance Works At ION Orchard Branch from 03-Jul-2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 03 Jul 2017									</p>
+																<div class="button">
+									<a title="Electrical Maintenance Works At ION Orchard Branch from 03-Jul-2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/electrical-maintenance-works-at-ion-orchard-branch-from-03-jul-2017-8pm-to-04-jul-2017-11am/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 25 June 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-25-june-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 25 June 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-25-june-2017/">										Scheduled System Maintenance of Online Banking and SC Mobile on 25 June 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 25 Jun 2017									</p>
+																<div class="button">
+									<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 25 June 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-25-june-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="My Money Seminar (Mandarin) : Investing Wisely For Retirement (Free Admission)" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/my-money-seminar-mandarin-investing-wisely-for-retirement-free-admission/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="My Money Seminar (Mandarin) : Investing Wisely For Retirement (Free Admission)" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/my-money-seminar-mandarin-investing-wisely-for-retirement-free-admission/">										My Money Seminar (Mandarin) : Investing Wisely For Retirement (Free Admission)									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 01 Jul 2017									</p>
+																<div class="button">
+									<a title="My Money Seminar (Mandarin) : Investing Wisely For Retirement (Free Admission)" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/my-money-seminar-mandarin-investing-wisely-for-retirement-free-admission/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled Maintenance of Online Services on 17 &amp; 18 June 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-online-services-on-17-18-june-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled Maintenance of Online Services on 17 &amp; 18 June 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-online-services-on-17-18-june-2017/">										Scheduled Maintenance of Online Services on 17 &amp; 18 June 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 16 Jun 2017									</p>
+																<div class="button">
+									<a title="Scheduled Maintenance of Online Services on 17 &amp; 18 June 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-online-services-on-17-18-june-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="eAdvices Notice" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/eadvices-notice/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="eAdvices Notice" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/eadvices-notice/">										eAdvices Notice									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 15 Jul 2017									</p>
+																<div class="button">
+									<a title="eAdvices Notice" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/eadvices-notice/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Important Changes to Customer Terms" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/important-changes-to-customer-terms/">									<div class="icon hover-icon icon-sc-document" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Important Changes to Customer Terms" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/important-changes-to-customer-terms/">										Important Changes to Customer Terms									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 15 Jul 2017									</p>
+																<div class="button">
+									<a title="Important Changes to Customer Terms" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/important-changes-to-customer-terms/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled Maintenance of ATM and CDM on 17 &amp; 18 Jun 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-automated-teller-machines-atm-cash-deposit-machines-cdm-on-17-18-jun-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled Maintenance of ATM and CDM on 17 &amp; 18 Jun 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-automated-teller-machines-atm-cash-deposit-machines-cdm-on-17-18-jun-2017/">										Scheduled Maintenance of ATM and CDM on 17 &amp; 18 Jun 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 17 Jun 2017									</p>
+																<div class="button">
+									<a title="Scheduled Maintenance of ATM and CDM on 17 &amp; 18 Jun 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-automated-teller-machines-atm-cash-deposit-machines-cdm-on-17-18-jun-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 11 June 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-11-june-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 11 June 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-11-june-2017/">										Scheduled System Maintenance of Online Banking and SC Mobile on 11 June 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 11 Jun 2017									</p>
+																<div class="button">
+									<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 11 June 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-11-june-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 4 June 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-4-june-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 4 June 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-4-june-2017/">										Scheduled System Maintenance of Online Banking and SC Mobile on 4 June 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 04 Jun 2017									</p>
+																<div class="button">
+									<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 4 June 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-4-june-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Revised Version of Pricing Guide – Effective 1 June 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/revised-version-of-pricing-guide-effective-1-june-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Revised Version of Pricing Guide – Effective 1 June 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/revised-version-of-pricing-guide-effective-1-june-2017/">										Revised Version of Pricing Guide – Effective 1 June 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 01 Jun 2017									</p>
+																<div class="button">
+									<a title="Revised Version of Pricing Guide – Effective 1 June 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/revised-version-of-pricing-guide-effective-1-june-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Closure of Standard Chartered Upper Thomson Branch" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/closure-of-standard-chartered-upper-thomson-branch/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Closure of Standard Chartered Upper Thomson Branch" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/closure-of-standard-chartered-upper-thomson-branch/">										Closure of Standard Chartered Upper Thomson Branch									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 31 Jul 2017									</p>
+																<div class="button">
+									<a title="Closure of Standard Chartered Upper Thomson Branch" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/closure-of-standard-chartered-upper-thomson-branch/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled System Maintenance of SMS Banking on 28 May 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-sms-banking-on-28-may-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled System Maintenance of SMS Banking on 28 May 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-sms-banking-on-28-may-2017/">										Scheduled System Maintenance of SMS Banking on 28 May 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 28 May 2017									</p>
+																<div class="button">
+									<a title="Scheduled System Maintenance of SMS Banking on 28 May 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-sms-banking-on-28-may-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 28 May 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-28-may-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 28 May 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-28-may-2017/">										Scheduled System Maintenance of Online Banking and SC Mobile on 28 May 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 28 May 2017									</p>
+																<div class="button">
+									<a title="Scheduled System Maintenance of Online Banking and SC Mobile on 28 May 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-banking-and-standard-chartered-mobile-on-28-may-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled Maintenance of Automated Teller Machines ATM Cash Deposit Machines CDM" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-automated-teller-machines-atm-cash-deposit-machines-cdm-on-14-may-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled Maintenance of Automated Teller Machines ATM Cash Deposit Machines CDM" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-automated-teller-machines-atm-cash-deposit-machines-cdm-on-14-may-2017/">										Scheduled Maintenance of Automated Teller Machines ATM Cash Deposit Machines CDM									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 14 May 2017									</p>
+																<div class="button">
+									<a title="Scheduled Maintenance of Automated Teller Machines ATM Cash Deposit Machines CDM" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-automated-teller-machines-atm-cash-deposit-machines-cdm-on-14-may-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="MY EXPRESS CASH Withdrawal" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/myexpress-cash-withdrawal/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="MY EXPRESS CASH Withdrawal" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/myexpress-cash-withdrawal/">										MY EXPRESS CASH Withdrawal									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 28 Apr 2017									</p>
+																<div class="button">
+									<a title="MY EXPRESS CASH Withdrawal" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/myexpress-cash-withdrawal/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Important Changes to Use of Cheque Book" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/changes-to-chequebook/">									<div class="icon hover-icon icon-sc-document" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Important Changes to Use of Cheque Book" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/changes-to-chequebook/">										Important Changes to Use of Cheque Book									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 03 May 2017									</p>
+																<div class="button">
+									<a title="Important Changes to Use of Cheque Book" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/changes-to-chequebook/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Removal of Landesbank Baden-Wurttemberg (LBBW) from Interbank Funds Transfer" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/removal-of-landesbank-baden-wurttemberg-lbbw-from-interbank-funds-transfer/">									<div class="icon hover-icon icon-sc-people-service" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Removal of Landesbank Baden-Wurttemberg (LBBW) from Interbank Funds Transfer" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/removal-of-landesbank-baden-wurttemberg-lbbw-from-interbank-funds-transfer/">										Removal of Landesbank Baden-Wurttemberg (LBBW) from Interbank Funds Transfer									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 30 Dec 2016									</p>
+																<div class="button">
+									<a title="Removal of Landesbank Baden-Wurttemberg (LBBW) from Interbank Funds Transfer" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/removal-of-landesbank-baden-wurttemberg-lbbw-from-interbank-funds-transfer/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Termination of The Royal Bank of Scotland plc from FAST Interbank Funds Transfer" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/termination-of-the-royal-bank-of-scotland-plc-from-fast-and-interbank-funds-transfer/">									<div class="icon hover-icon icon-sc-people-service" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Termination of The Royal Bank of Scotland plc from FAST Interbank Funds Transfer" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/termination-of-the-royal-bank-of-scotland-plc-from-fast-and-interbank-funds-transfer/">										Termination of The Royal Bank of Scotland plc from FAST Interbank Funds Transfer									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 23 Dec 2016									</p>
+																<div class="button">
+									<a title="Termination of The Royal Bank of Scotland plc from FAST Interbank Funds Transfer" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/termination-of-the-royal-bank-of-scotland-plc-from-fast-and-interbank-funds-transfer/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled System Maintenance of Online Application Forms on 14 May 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-application-forms-on-14-may-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled System Maintenance of Online Application Forms on 14 May 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-application-forms-on-14-may-2017/">										Scheduled System Maintenance of Online Application Forms on 14 May 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 14 May 2017									</p>
+																<div class="button">
+									<a title="Scheduled System Maintenance of Online Application Forms on 14 May 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-online-application-forms-on-14-may-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled Maintenance of ATMs and CDMs on 19 May 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-atms-and-cdms-on-19-may-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled Maintenance of ATMs and CDMs on 19 May 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-atms-and-cdms-on-19-may-2017/">										Scheduled Maintenance of ATMs and CDMs on 19 May 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 19 May 2017									</p>
+																<div class="button">
+									<a title="Scheduled Maintenance of ATMs and CDMs on 19 May 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-atms-and-cdms-on-19-may-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled Maintenance of ATM and CDM on 20 and 21 May 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-atm-and-cdm-on-20-and-21-may-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled Maintenance of ATM and CDM on 20 and 21 May 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-atm-and-cdm-on-20-and-21-may-2017/">										Scheduled Maintenance of ATM and CDM on 20 and 21 May 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 20 May 2017									</p>
+																<div class="button">
+									<a title="Scheduled Maintenance of ATM and CDM on 20 and 21 May 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-maintenance-of-atm-and-cdm-on-20-and-21-may-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+																	<div class="item hover-icon-with-gradient-blue-to-green" role="listitem">
+															<a title="Scheduled System Maintenance of Standard Chartered Mobile on 21 May 2017" data-context="Important Information icon link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-standard-chartered-mobile-on-21-may-2017/">									<div class="icon hover-icon icon-sc-information-notice" data-grunticon-embed></div>
+								</a>
+														<div class="content">
+								<h3 class="title">
+									<a title="Scheduled System Maintenance of Standard Chartered Mobile on 21 May 2017" data-context="Important Information title link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-standard-chartered-mobile-on-21-may-2017/">										Scheduled System Maintenance of Standard Chartered Mobile on 21 May 2017									</a>
+								</h3>
+
+																	<p class="note">
+										Effective 21 May 2017									</p>
+																<div class="button">
+									<a title="Scheduled System Maintenance of Standard Chartered Mobile on 21 May 2017" data-context="Important Information more link" href="https://www.sc.com/sg/important-information/scheduled-system-maintenance-of-standard-chartered-mobile-on-21-may-2017/" class="c-button-icon read-more">										<span class="label-icon">More</span>
+										<span class="icon icon-arrow-2 " data-grunticon-embed></span>
+									</a>
+								</div>
+							</div>
+						</div>
+												</div>
+			</div>
+</div>
+
+<div class="m-click-to-chat" id="sc-lb-module-click-to-chat"	data-video="Video Chat"
+	data-audio="Audio Chat"
+	data-text="Text Chat"
+	data-subject-id='SG_PERSONAL'data-entry-type='SG_PERSONAL'data-work-group='SG_PERSONAL'></div>
+
+<footer class="m-footer has-columns" id="sc-lb-module-footer">
+	<div class="content-wrapper">
+		<div class="site-info only-desktop">
+							<span class="company">© Standard Chartered Bank (Singapore) Limited | Reg no. 201224747C</span>
+										<span class="sitemap">
+					<a title="Site map" data-context="Footer site map link" href="https://www.sc.com/sg/sitemap/">						Site map					</a>
+				</span>
+					</div>
+
+
+		<div class="column only-desktop">
+			<ul class="list">
+									<li>
+						<a title="About Us" data-context="Footer left column links" href="https://www.sc.com/sg/about-us/">							About Us						</a>
+					</li>
+									<li>
+						<a title="Bank with us" data-context="Footer left column links" href="https://www.sc.com/sg/bank-with-us/">							Bank with us						</a>
+					</li>
+									<li>
+						<a title="ATMs &amp; Branches" data-context="Footer left column links" href="https://www.sc.com/sg/atm-branch-locator/">							ATMs &amp; Branches						</a>
+					</li>
+									<li>
+						<a title="Get Help" data-context="Footer left column links" href="https://www.sc.com/sg/help/">							Get Help						</a>
+					</li>
+									<li>
+						<a title="FAQs" data-context="Footer left column links" href="https://www.sc.com/sg/help/#faq">							FAQs						</a>
+					</li>
+									<li>
+						<a title="Fees &amp; Charges" data-context="Footer left column links" href="https://av.sc.com/sg/content/docs/sg-scb-pricing-guide.pdf">							Fees &amp; Charges						</a>
+					</li>
+									<li>
+						<a title="Forms &amp; Downloads" data-context="Footer left column links" href="https://www.sc.com/sg/help/forms/">							Forms &amp; Downloads						</a>
+					</li>
+							</ul>
+		</div>
+
+		<div class="column only-desktop">
+			<ul class="list">
+									<li>
+						<a title="Our Thinking" data-context="Footer center column links" href="https://www.sc.com/retail/mce/index.html#/landing?lang=en&#038;ctry=SG&#038;channel=PLRB&#038;sapp=PUB">							Our Thinking						</a>
+					</li>
+									<li>
+						<a title="Investor Relations" data-context="Footer center column links" href="http://investors.sc.com/en/index.cfm">							Investor Relations						</a>
+					</li>
+									<li>
+						<a title="Global Research" data-context="Footer center column links" href="http://www.standardchartered.com/en/learning-resources/global-research.html">							Global Research						</a>
+					</li>
+									<li>
+						<a title="News and Media" data-context="Footer center column links" href="https://www.sc.com/sg/news-media/">							News and Media						</a>
+					</li>
+									<li>
+						<a title="Awards &amp; Achievements" data-context="Footer center column links" href="https://www.sc.com/sg/about-us/awards-achievements/">							Awards &amp; Achievements						</a>
+					</li>
+									<li>
+						<a title="Careers" data-context="Footer center column links" href="https://www.sc.com/en/careers/">							Careers						</a>
+					</li>
+									<li>
+						<a title="Group Website" data-context="Footer center column links" href="https://www.sc.com/en/">							Group Website						</a>
+					</li>
+							</ul>
+		</div>
+
+		<div class="column has-border only-desktop">
+			<ul class="list">
+									<li>
+						<a title="Speaking up" data-context="Footer right column links" href="https://wrs.expolink.co.uk/speakingup">							Speaking up						</a>
+					</li>
+									<li>
+						<a title="Protecting our clients" data-context="Footer right column links" href="https://www.sc.com/protecting-our-clients/">							Protecting our clients						</a>
+					</li>
+									<li>
+						<a title="Cookie Policy" data-context="Footer right column links" href="https://www.sc.com/en/cookie-statement.html">							Cookie Policy						</a>
+					</li>
+									<li>
+						<a title="Sustainability" data-context="Footer right column links" href="http://www.standardchartered.com/sustainability/en/index.html">							Sustainability						</a>
+					</li>
+									<li>
+						<a title="Privacy Statement" data-context="Footer right column links" href="https://www.sc.com/sg/privacy/">							Privacy Statement						</a>
+					</li>
+									<li>
+						<a title="Terms and Conditions" data-context="Footer right column links" href="https://www.sc.com/sg/terms-and-conditions/">							Terms and Conditions						</a>
+					</li>
+							</ul>
+		</div>
+
+		<div class="column">
+			<div class="contact-data">
+																	<ul class="segment">
+													<li>
+								<h3>Personal Banking <span class="timing">(24-hour)</span></h3>
+								<p class="number">1800 747 7000</p>
+																	<p class="detail">Calling from overseas (65) 6747 7000</p>
+															</li>
+											</ul>
+							</div>
+
+										<div class="accordion-item">
+					<label for="footer-quick-links-16970" class="item-wrapper only-mobile">
+						<input id="footer-quick-links-16970" name="footer-quick-links-16970" type="checkbox">
+						<span class="question">
+							<span class="question-text">Quick Links</span>
+							<span class="c-icon icon-varrow" data-grunticon-embed></span>
+						</span>
+						<div class="answer">
+							<ul>
+																	<li>
+										<a title="About Us" data-context="Footer mobile links" href="https://www.sc.com/sg/about-us/">											About Us										</a>
+									</li>
+																	<li>
+										<a title="Bank with us" data-context="Footer mobile links" href="https://www.sc.com/sg/bank-with-us/">											Bank with us										</a>
+									</li>
+																	<li>
+										<a title="ATMs &amp; Branches" data-context="Footer mobile links" href="https://www.sc.com/sg/atm-branch-locator/">											ATMs &amp; Branches										</a>
+									</li>
+																	<li>
+										<a title="Get Help" data-context="Footer mobile links" href="https://www.sc.com/sg/help/">											Get Help										</a>
+									</li>
+																	<li>
+										<a title="FAQs" data-context="Footer mobile links" href="https://www.sc.com/sg/help/#faq">											FAQs										</a>
+									</li>
+																	<li>
+										<a title="Fees &amp; Charges" data-context="Footer mobile links" href="https://av.sc.com/sg/content/docs/sg-scb-pricing-guide.pdf">											Fees &amp; Charges										</a>
+									</li>
+																	<li>
+										<a title="Forms &amp; Downloads" data-context="Footer mobile links" href="https://www.sc.com/sg/help/forms/">											Forms &amp; Downloads										</a>
+									</li>
+																	<li>
+										<a title="Our Thinking" data-context="Footer mobile links" href="https://www.sc.com/retail/mce/index.html#/landing?lang=en&#038;ctry=SG&#038;channel=PLRB&#038;sapp=PUB">											Our Thinking										</a>
+									</li>
+																	<li>
+										<a title="Investor Relations" data-context="Footer mobile links" href="http://investors.sc.com/en/index.cfm">											Investor Relations										</a>
+									</li>
+																	<li>
+										<a title="Global Research" data-context="Footer mobile links" href="http://www.standardchartered.com/en/learning-resources/global-research.html">											Global Research										</a>
+									</li>
+																	<li>
+										<a title="News and Media" data-context="Footer mobile links" href="https://www.sc.com/sg/news-media/">											News and Media										</a>
+									</li>
+																	<li>
+										<a title="Awards &amp; Achievements" data-context="Footer mobile links" href="https://www.sc.com/sg/about-us/awards-achievements/">											Awards &amp; Achievements										</a>
+									</li>
+																	<li>
+										<a title="Careers" data-context="Footer mobile links" href="https://www.sc.com/en/careers/">											Careers										</a>
+									</li>
+																	<li>
+										<a title="Group Website" data-context="Footer mobile links" href="https://www.sc.com/en/">											Group Website										</a>
+									</li>
+																	<li>
+										<a title="Speaking up" data-context="Footer mobile links" href="https://wrs.expolink.co.uk/speakingup">											Speaking up										</a>
+									</li>
+																	<li>
+										<a title="Protecting our clients" data-context="Footer mobile links" href="https://www.sc.com/protecting-our-clients/">											Protecting our clients										</a>
+									</li>
+																	<li>
+										<a title="Cookie Policy" data-context="Footer mobile links" href="https://www.sc.com/en/cookie-statement.html">											Cookie Policy										</a>
+									</li>
+																	<li>
+										<a title="Privacy Statement" data-context="Footer mobile links" href="https://www.sc.com/sg/privacy/">											Privacy Statement										</a>
+									</li>
+																	<li>
+										<a title="Terms and Conditions" data-context="Footer mobile links" href="https://www.sc.com/sg/terms-and-conditions/">											Terms and Conditions										</a>
+									</li>
+															</ul>
+						</div>
+					</label>
+				</div>
+
+			<ul class="social-links">
+									<li>
+						<a title="Facebook" data-context="Footer social media links" href="https://www.facebook.com/Standardcharteredsg/" class="icon-facebook" data-grunticon-embed>							<span>Facebook</span>
+						</a>
+					</li>
+									<li>
+						<a title="Twitter" data-context="Footer social media links" href="https://twitter.com/StanChart" class="icon-twitter" data-grunticon-embed>							<span>Twitter</span>
+						</a>
+					</li>
+									<li>
+						<a title="Linked In" data-context="Footer social media links" href="https://www.linkedin.com/company/standard-chartered-bank/" class="icon-linkedin" data-grunticon-embed>							<span>Linked In</span>
+						</a>
+					</li>
+							</ul>
+		</div>
+
+		<div class="clearer"></div>
+	</div>
+</footer>
+
+<div class="helper-svg-gradients">
+	<svg width="100px" height="100px" viewBox="0 0 100 100">
+		<defs>
+			<!-- Gradient from blue to green -->
+			<linearGradient id="gradient-blue-to-green" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+				<stop stop-color="#6cc9fe" offset="0"></stop>
+				<stop stop-color="#38d54a" offset="1"></stop>
+			</linearGradient>
+		</defs>
+	</svg>
+</div>
+</div>
+<script type='text/javascript' src='https://av.sc.com/assets/global/js/vendor.js'></script>
+<script type='text/javascript' src='https://av.sc.com/assets/global/icons/grunticon.loader.min.js'></script>
+<script type='text/javascript' src='https://av.sc.com/assets/global/js/vendor/bundle.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var baseURL = "https:\/\/av.sc.com\/assets\/global";
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://av.sc.com/assets/global/js/grunticon-init.js'></script>
+<script type='text/javascript' src='https://av.sc.com/assets/sg/js/scripts.js'></script>
+<script type='text/javascript' src='https://av.sc.com/assets/global/js/clickToChat.min.js'></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0906082bd1","applicationID":"25546387","transactionName":"b1VWNREDCkVUAUdYVlYfdxQQFgtbGkodDhcTDx1eTF1A","queueTime":0,"applicationTime":10241,"atts":"QxJVQ1kZGUs=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+<script>
+    new Vue({
+      el: '#app',
+      data: {
+        greeting: 'Welcome to your Vue.js app!',
+        docsURL: 'http://vuejs.org/guide/',
+        gitterURL: 'https://gitter.im/vuejs/vue',
+        forumURL: 'http://forum.vuejs.org/',
+				showSearchBar: false,
+				searchTerm: '',
+				activeLabel: 0,
+				fakeData: [
+					{
+						title: 'Singapore Dollar Time Deposit',
+						titleLink: 'https://www.sc.com/sg/save/time-deposits/singapore-dollar-time-deposit/',
+						crumb: 'DEPOSIT ACCOUNTS » TIME DEPOSITS',
+						summary: "Standard Chartered's Singapore Dollar Time Deposits allow you to maximise your growth potential through attractive interest returns.",
+						applyNow: true,
+						thumbnail: 'https://av.sc.com/sg/content/images/shutterstock_63304795.jpg',
+						label: ''
+					},
+					{
+						title: 'Structured Deposits',
+						titleLink: 'https://www.sc.com/sg/investment/structured-deposits/',
+						crumb: false,
+						summary: 'Structured Deposits are attractive to investors with a low to medium risk appetite with a variety of tenors, no front-end or annual management fees. Financial flexibility for new opportunities.',
+						applyNow: false,
+						thumbnail: 'https://av.sc.com/sg/content/images/NEWMASTHEADS_0002_structured-notes.jpg',
+						label: 'INVEST'
+					},
+					{
+						title: 'Time Deposits',
+						titleLink: '',
+						crumb: 'DEPOSIT ACCOUNTS » TIME DEPOSITS',
+						summary: ' ',
+						applyNow: false,
+						thumbnail: 'https://av.sc.com/sg/content/images/time_deposit-1.jpg',
+						label: ''
+					},
+					{
+						title: 'Foreign Curency Time Deposits',
+						titleLink: 'https://www.sc.com/sg/save/time-deposits/foreign-currency-time-deposits/',
+						crumb: 'DEPOSIT ACCOUNTS » TIME DEPOSITS',
+						summary: 'Our Foreign Currency Time Deposits allow you to maximise your growth potential through attractive interest returns.',
+						applyNow: true,
+						thumbnail: 'https://av.sc.com/sg/content/images/NEWMASTHEADS_0014_foreign-time-deposit.jpg',
+						label: ''
+					},
+					{
+						title: 'Business Time Deposits',
+						titleLink: 'https://www.sc.com/sg/business-yield-enhancing/business-time-deposits/',
+						crumb: '',
+						summary: 'Earn a higher rate of interest on your money. We offer a wide variety of tenure, currency options to suit different needs.',
+						applyNow: false,
+						getInTouch: true,
+						thumbnail: 'https://av.sc.com/sg/content/images/business_time_deposits1600x1600.jpg',
+						label: ''
+					},
+					{
+						title: 'Accounts: FAQs',
+						titleLink: 'https://www.sc.com/sg/help/faqs/accounts/',
+						crumb: '',
+						summary: 'Standard Chartered Bank help centre saver frequently asked questions.',
+						applyNow: false,
+						getInTouch: false,
+						thumbnail: '',
+						label: 'SUPPORT'
+					},
+					{
+						title: 'Platinum Visa / Mastercard® Credit Card',
+						titleLink: 'https://www.sc.com/sg/credit-cards/platinum-visa-mastercard-card/',
+						crumb: 'CREDIT CARD » REWARDS',
+						summary: 'The Standard Chartered Platinum Visa/MasterCard gives you access to more than 1,000 great deals islandwide. Plus, you earn reward points on everything you spend and more.',
+						applyNow: true,
+						getInTouch: false,
+						thumbnail: 'https://av.sc.com/sg/content/images/Platinum-VisaMastercard-Credit-Card-636x636.jpg',
+						label: 'CREDITCARDS'
+					},
+					{
+						title: 'Unlimited Cashback Credit Card',
+						titleLink: 'https://www.sc.com/sg/credit-cards/unlimited-cashback-credit-card/',
+						crumb: 'CREDIT CARD » CASHBACK',
+						summary: 'The New Unlimited Cashback Credit Card, Score 1.5% cashback on everything. No cashback cap and no minimum spend. No cashback cap and no minimum spend. Enjoy 1.5% cashback on all eligible spend.',
+						applyNow: true,
+						getInTouch: false,
+						thumbnail: 'https://av.sc.com/sg/content/images/sg-unlimitedcashback.png',
+						label: 'CREDITCARDS'
+					},
+					{
+						title: 'NUS Alumni Platinum Card',
+						titleLink: 'https://www.sc.com/sg/credit-cards/nus-alumni-platinum-card/',
+						crumb: 'CREDIT CARD » REWARDS',
+						summary: 'Enjoy your path to success with the Standard Chartered NUS Alumni Platinum Credit Card, which gives you the freedom to spend, offers exclusive privileges and allows you to contribute to your alma mater.',
+						applyNow: true,
+						getInTouch: false,
+						thumbnail: 'https://av.sc.com/sg/content/images/NUS-Alumni-Platinum-Card-636x636.jpg',
+						label: 'CREDITCARDS'
+					},
+					{
+						title: 'CashOne / Credit Card Instalment Loan $199 CashBack Promotion Terms and Conditions',
+						titleLink: 'https://www.sc.com/sg/terms-and-conditions/cashone-credit-card-instalment-loan-199-cashback-promotion-terms-and-conditions/',
+						crumb: 'LOANS AND MORTGAGES » LOANS',
+						summary: 'CashOne / Credit Card Instalment Loan $199 CashBack Promotion Terms and Conditions',
+						applyNow: false,
+						getInTouch: false,
+						thumbnail: '',
+						label: 'BORROW'
+					},
+					{
+						title: 'Loans and Mortgages',
+						titleLink: 'https://www.sc.com/sg/borrow/',
+						crumb: '',
+						summary: 'Apply for loans, mortgages and personal loans with Standard Chartered Bank Singapore today. We offer a comprehensive range of loans and credit facilities to suit the needs of you and your family. Make your personal loan application today!',
+						applyNow: false,
+						getInTouch: false,
+						thumbnail: 'https://av.sc.com/sg/content/images/mortgages1600x1600.jpg',
+						label: 'BORROW'
+					}
+					// {
+					// 	title: '',
+					// 	titleLink: '',
+					// 	crumb: '',
+					// 	summary: '',
+					// 	applyNow: ,
+					//	getInTouch: ,
+					// 	thumbnail: '',
+					//	label: ''
+					// },
+				]
+      },
+			computed: {
+				filteredItems () {
+					if (this.searchTerm) {
+						let filteredList = this.fakeData.filter(item => {
+							return (item.title.toLowerCase().includes(this.searchTerm.toLowerCase())) || (item.summary.toLowerCase().includes(this.searchTerm.toLowerCase()))
+						})
+						if (this.activeLabel === 0) { // all label is active
+							// do nothing to filteredList
+						} else if (this.activeLabel === 1) { // credit cards label is active
+							filteredList = filteredList.filter(item => {
+								return item.label === 'CREDITCARDS'
+							})
+						} else if (this.activeLabel === 3) { // credit cards label is active
+							filteredList = filteredList.filter(item => {
+								return item.label === 'BORROW'
+							})
+						}
+						return filteredList
+					}
+				},
+				filteredItemsForLabelCounting () { // computedLabelAll (and other labels) are calc based on this filtered list
+					if (this.searchTerm) {
+						return this.fakeData.filter(item => {
+							return (item.title.toLowerCase().includes(this.searchTerm.toLowerCase())) || (item.summary.toLowerCase().includes(this.searchTerm.toLowerCase()))
+						})
+					}
+				},
+				isAllLabelActive () {
+					return this.activeLabel === 0
+				},
+				isCreditCardsLabelActive () {
+					return this.activeLabel === 1
+				},
+				isSaveLabelActive () {
+					return this.activeLabel === 2
+				},
+				isBorrowLabelActive () {
+					return this.activeLabel === 3
+				},
+				isSupportLabelActive () {
+					return this.activeLabel === 6
+				},
+				computedLabelAll () {
+					return this.filteredItemsForLabelCounting.length
+				},
+				computedLabelCreditCards () {
+					return this.filteredItemsForLabelCounting.reduce((accum, val) => {
+						if (val.label === 'CREDITCARDS') {
+							return accum + 1
+						} else {
+							return accum
+						}
+					}, 0)
+				},
+				computedLabelSave () {
+					return this.filteredItemsForLabelCounting.reduce((accum, val) => {
+						if (val.label === 'SAVE') {
+							return accum + 1
+						} else {
+							return accum
+						}
+					}, 0)
+				},
+				computedLabelBorrow () {
+					return this.filteredItemsForLabelCounting.reduce((accum, val) => {
+						if (val.label === 'BORROW') {
+							return accum + 1
+						} else {
+							return accum
+						}
+					}, 0)
+				},
+				computedLabelSupport () {
+					return this.filteredItemsForLabelCounting.reduce((accum, val) => {
+						if (val.label === 'SUPPORT') {
+							return accum + 1
+						} else {
+							return accum
+						}
+					}, 0)
+				}
+			},
+      methods: {
+        humanizeURL: function (url) {
+          return url
+            .replace(/^https?:\/\//, '')
+            .replace(/\/$/, '')
+        },
+				alertUs () {
+					console.log('hihihihih')
+				}
+      }
+    })
+  </script>
+</body>
+</html>
